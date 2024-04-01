@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import mainPhoto from "../../../images/main-photo.webp"
+import mainPhoto from "../../../images/main-photo.png"
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Icon} from "../../../../components/icon/Icon";
 
@@ -10,8 +10,8 @@ export const Main = () => {
             <FlexWrapper align={"center"} justify={"space-around"}>
                 <TextBlock>
                     <MainTitle>I’m Rayan Adlrdard Front-end Developer</MainTitle>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis.
-                        Natoque rutrum semper sed suspendisse nunc lectus.</p>
+                    <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis.
+                        Natoque rutrum semper sed suspendisse nunc lectus.</Text>
                     <button>
                         <span>HIRE ME</span>
                         <Icon iconId={"btnHireMe"} height={"12"} width={"12"} viewBox={"0 0 12 12"}/>
@@ -32,8 +32,7 @@ const TextBlock=styled.div``
 
 const MainTitle=styled.h1``
 
-
-
+const Text=styled.p``
 
 
 const Photo = styled.img`
