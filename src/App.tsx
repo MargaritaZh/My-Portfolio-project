@@ -6,6 +6,7 @@ import {Portfolio} from "./assets/layout/sections/portfolio/Portfolio";
 import {Blog} from "./assets/layout/sections/blog/Blog";
 import {Education} from "./assets/layout/sections/education/Education";
 import {WorkHistory} from "./assets/layout/sections/workHistory/WorkHistory";
+import {Recommendations} from "./assets/layout/sections/recommendations/Recommendations";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
              <Header/>
              <Main/>
              <Services/>
+             <Recommendations/>
              <Education/>
              <WorkHistory/>
              <Portfolio/>
