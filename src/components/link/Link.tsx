@@ -1,11 +1,15 @@
 import React from 'react';
-import {Icon} from "../../../../../../components/icon/Icon";
 import styled from "styled-components";
+import {Icon} from "../icon/Icon";
 
-export const ServicLink = () => {
+
+
+export const Link = (props:{
+    text:string
+}) => {
     return (
         <StyledServicLink href="">
-            <Text>ORDER NOW</Text>
+            <Text>{props.text}</Text>
             <Icon iconId="arrow" height="20" width="20" viewBox="0 0 20 20"/>
         </StyledServicLink>
     );

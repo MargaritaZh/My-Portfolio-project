@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from "../../../../../components/icon/Icon";
 import styled from "styled-components";
-import {ServicLink} from "./servicLink/ServicLink";
+import {Link} from "../../../../../components/link/Link";
 type ServicPropsType = {
     iconId?: string;
     height?: string;
@@ -20,7 +20,7 @@ export const Servic = ({ iconId, height, width, viewBox, title, text, isLink = f
             )}
             <ServicTitle>{title}</ServicTitle>
             <ServicText>{text}</ServicText>
-            {isLink && (<ServicLink/>)}
+            {isLink && (<Link text={"arrow now"}/>)}
         </StyledServic>
     );
 };
