@@ -30,7 +30,7 @@ export const Blog = () => {
                     title={"How to make Flyer Design"}
                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
             </FlexWrapper>
-            <FlexWrapper>
+            <FlexWrapper justify={"center"}>
                 <Info/>
                 <ContactInfo/>
             </FlexWrapper>
