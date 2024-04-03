@@ -7,6 +7,7 @@ import {Blog} from "./assets/layout/sections/blog/Blog";
 import {Education} from "./assets/layout/sections/education/Education";
 import {WorkHistory} from "./assets/layout/sections/workHistory/WorkHistory";
 import {Recommendations} from "./assets/layout/sections/recommendations/Recommendations";
+import {Footer} from "./assets/layout/footer/Footer";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
              <WorkHistory/>
              <Portfolio/>
              <Blog/>
+             <Footer/>
          </div>
 
 
