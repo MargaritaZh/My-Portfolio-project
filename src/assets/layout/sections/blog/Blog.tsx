@@ -7,6 +7,8 @@ import {BlogCart} from "./blogCart/BlogCart";
 import blogCartImage1 from "../../../images/blog-images/blog-image-1.webp"
 import blogCartImage2 from "../../../images/blog-images/blog-image-2.webp"
 import blogCartImage3 from "../../../images/blog-images/blog-image-3.webp"
+import {ContactInfo} from "./contactInfo/ContactInfo";
+import {Info} from "./info/Info";
 
 export const Blog = () => {
     return (
@@ -28,6 +30,11 @@ export const Blog = () => {
                     title={"How to make Flyer Design"}
                     text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
             </FlexWrapper>
+            <FlexWrapper>
+                <Info/>
+                <ContactInfo/>
+            </FlexWrapper>
+
         </StyledBlog>
     );
 };
