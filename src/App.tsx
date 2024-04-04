@@ -9,26 +9,25 @@ import {WorkHistory} from "./assets/layout/sections/workHistory/WorkHistory";
 import {Recommendations} from "./assets/layout/sections/recommendations/Recommendations";
 import {Footer} from "./assets/layout/footer/Footer";
 import {Price} from "./assets/layout/sections/price/Price";
+import {SidebarRight} from "./assets/layout/sidebarRight/Sidebar";
 
 
 function App() {
     return (
         <div className="App">
-
-         <div>
-             <Header/>
-             <Main/>
-             <Services/>
-             <Price/>
-             <Recommendations/>
-             <Education/>
-             <WorkHistory/>
-             <Portfolio/>
-             <Blog/>
-             <Footer/>
-         </div>
-
-
+            <SidebarRight/>
+            <div>
+                <Header/>
+                <Main/>
+                <Services/>
+                <Price/>
+                <Recommendations/>
+                <Education/>
+                <WorkHistory/>
+                <Portfolio/>
+                <Blog/>
+                <Footer/>
+            </div>
         </div>
     );
 }

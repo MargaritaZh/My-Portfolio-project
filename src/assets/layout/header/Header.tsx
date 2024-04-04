@@ -8,7 +8,7 @@ const items = ["Home", "Services", "Education", "Portfolio", "Blog", "Contact"]
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
+            <Logo iconId={"coding"} height={"68"} width={"68"} viewBox={"0 0 68 68"}/>
             <Menu menuItems={items}/>
         </StyledHeader>
     );

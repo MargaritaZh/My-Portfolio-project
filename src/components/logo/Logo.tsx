@@ -1,10 +1,17 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
 
-export const Logo = () => {
+type LogoPropsType = {
+    iconId: string
+    width?: string
+    height?: string
+    viewBox?: string
+}
+
+export const Logo = (props: LogoPropsType) => {
     return (
         <a href="">
-            <Icon iconId={"coding"}/>
+            <Icon iconId={props.iconId} height={props.height} width={props.width} viewBox={props.viewBox}/>
         </a>
     );
 };
