@@ -23,6 +23,4 @@ export const Button = ({ text,iconId, height, width, viewBox}:ButtonPropsType) =
 
 const StyledButton= styled.button`
     background-color: yellow;
-    
-    
 `
