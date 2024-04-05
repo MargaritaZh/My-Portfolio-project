@@ -4,6 +4,9 @@ import {Icon} from "../../../../components/icon/Icon";
 
 type SidebarMenuPropsType = {
     menuIconsId: Array<string>
+    width:string
+    height:string
+    viewBox:string
 }
 
 export const SidebarMenu = (props: SidebarMenuPropsType) => {
@@ -12,7 +15,7 @@ export const SidebarMenu = (props: SidebarMenuPropsType) => {
             {props.menuIconsId.map((item, index) => {
                 return <li key={index}>
                     <a href="">
-                        <Icon iconId={item} width={"18"} height={"18"} viewBox={"0 0 18 18"}/>
+                        <Icon iconId={item} width={props.width} height={props.height} viewBox={props.viewBox}/>
                     </a>
                 </li>
             })}

@@ -10,11 +10,13 @@ import {Recommendations} from "./assets/layout/sections/recommendations/Recommen
 import {Footer} from "./assets/layout/footer/Footer";
 import {Price} from "./assets/layout/sections/price/Price";
 import {SidebarRight} from "./assets/layout/sidebarRight/Sidebar";
+import {SidebarLeft} from "./assets/layout/sidebarLeft/SidebarLeft";
 
 
 function App() {
     return (
         <div className="App">
+            <SidebarLeft/>
             <SidebarRight/>
             <div>
                 <Header/>
