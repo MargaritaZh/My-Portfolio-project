@@ -56,6 +56,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
             <p>For most businesses that want to optimize web queries</p>
 
             <ul>
+
                 {featuresData.map((feature, index) => (
                     <li key={index}>
                         <Icon width={"24"} height={"25"} viewBox={"0 0 25 24"}
@@ -63,6 +64,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
                         <span>{feature.text}</span>
                     </li>
                 ))}
+
             </ul>
             <Button text={"ORDER NOW"}/>
         </StyledPriceCard>

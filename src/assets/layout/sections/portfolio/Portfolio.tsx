@@ -35,8 +35,6 @@ export const Portfolio = () => {
                 <PortfolioWork src={work8}/>
                 <PortfolioWork src={work9}/>
             </FlexWrapper>
-
-
         </StyledPortfolio>
     );
 };
