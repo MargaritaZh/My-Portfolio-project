@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./Theme";
 
 
 export const GlobalStyle=createGlobalStyle`
@@ -18,6 +19,9 @@ export const GlobalStyle=createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        background-color: ${theme.colors.primaryBg};
+        color: ${theme.colors.font};
     }
 
     a {
@@ -31,5 +35,13 @@ export const GlobalStyle=createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+    }
+
+    section {
+
+        // background-color: ${theme.colors.primaryBg};
+        //
+        // outline: solid 1px blue;
+        //
     }
 `
