@@ -8,9 +8,10 @@ type ButtonPropsType={
     height?: string
     width?: string
     viewBox?: string
+    variant?: string
 }
 
-export const Button = ({ text,iconId, height, width, viewBox}:ButtonPropsType) => {
+export const Button = ({text,iconId, height, width, viewBox}:ButtonPropsType) => {
     return (
         <StyledButton type="submit">
             <span>{text}</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import smallMainPhoto from "../../../images/small-main-photo.webp";
-import {SidebarMenu} from "../../sidebarRight/sidebarMenu/SidebarMenu";
+import {SidebarMenu, StyledSidebarMenu} from "../../../../components/menu/sidebarMenu/SidebarMenu";
 import styled from "styled-components";
 
 
@@ -17,9 +17,24 @@ export const MainCard = () => {
     );
 };
 
-const  StyledMainCard=styled.div``
+const  StyledMainCard=styled.div`
+    ${StyledSidebarMenu} {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px
+    }
 
-const Image = styled.img``
+
+`
+
+const Image = styled.img`
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+`
 
 const Name = styled.h3``
 

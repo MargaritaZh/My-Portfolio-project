@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../../components/SectionTitle";
 import {SectionTextDescription} from "../../../../components/SectionTextDescription";
-import {Menu} from "../../../../components/menu/Menu";
+import {HeaderMenu} from "../../../../components/menu/headerMenu/HeaderMenu";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {PortfolioWork} from "./portfolioWork/PortfolioWork";
 import work1 from "../../../images/portfolio-images/image-1.webp"
@@ -23,7 +23,7 @@ export const Portfolio = () => {
             <SectionTitle>Portfolio</SectionTitle>
             <SectionTextDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
                 officia consequat duis enim velit mollit. lorem ipsum</SectionTextDescription>
-            <Menu menuItems={worksItems}/>
+            <HeaderMenu menuItems={worksItems}/>
             <FlexWrapper justify={"space-between"} wrap={"wrap"}>
                 <PortfolioWork src={work1}/>
                 <PortfolioWork src={work2}/>

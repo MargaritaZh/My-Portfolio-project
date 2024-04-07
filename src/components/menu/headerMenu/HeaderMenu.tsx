@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 
-// type MenuPropsType={
+// type HeaderMenuPropsType={
 //     menuItems: Array<string>
 // }
 
-export const Menu = (props: { menuItems: Array<string>}) => {
+export const HeaderMenu = (props: { menuItems: Array<string>}) => {
     return (
-        <StyledMenu>
+        <StyledHeaderMenu>
             <ul>
                 {props.menuItems.map((item,index)=> {
                    return <li key={index}>
@@ -16,11 +16,11 @@ export const Menu = (props: { menuItems: Array<string>}) => {
                 })}
 
             </ul>
-        </StyledMenu>
+        </StyledHeaderMenu>
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
     ul {
         display: flex;
         gap: 30px;

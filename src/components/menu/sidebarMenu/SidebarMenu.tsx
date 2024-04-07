@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../../../../components/icon/Icon";
+import {Icon} from "../../icon/Icon";
 
 type SidebarMenuPropsType = {
     menuIconsId: Array<string>
@@ -23,7 +23,7 @@ export const SidebarMenu = (props: SidebarMenuPropsType) => {
     );
 };
 
-const StyledSidebarMenu = styled.ul`
+export const StyledSidebarMenu = styled.ul`
     border: 1px solid red;
 `
 

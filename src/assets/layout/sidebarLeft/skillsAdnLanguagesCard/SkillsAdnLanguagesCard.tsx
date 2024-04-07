@@ -13,16 +13,26 @@ export const SkillsAdnLanguagesCard = (props:SkillsAdnLanguagesCardPropsType) =>
             <Title>{props.title}</Title>
 
             {props.items.map((item, index) => (
-                <div key={index}>
+                <div>
                     <span>{item.name}</span>
                     <span>{item.percentage}</span>
+                    {/*<div key={index} percentage={item.percentage}>*/}
+                    {/*    /!*<span></span>*!/*/}
+                    {/*</div>*/}
                 </div>
-            ))}
+    )
+)}
 
-        </StyledSkillsAdnLanguagesCard>
+</StyledSkillsAdnLanguagesCard>
     );
 };
 
 const StyledSkillsAdnLanguagesCard=styled.div``
 
 const Title=styled.h3``
+
+
+//
+// const Before=styled.div`
+// (per)=> width:`${per}%`
+// ::before`

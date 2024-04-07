@@ -9,30 +9,38 @@ import {WorkHistory} from "./assets/layout/sections/workHistory/WorkHistory";
 import {Recommendations} from "./assets/layout/sections/recommendations/Recommendations";
 import {Footer} from "./assets/layout/footer/Footer";
 import {Price} from "./assets/layout/sections/price/Price";
-import {SidebarRight} from "./assets/layout/sidebarRight/Sidebar";
-import {SidebarLeft} from "./assets/layout/sidebarLeft/SidebarLeft";
+import {Sidebar} from "./assets/layout/sidebarLeft/Sidebar";
+import {NavBar} from "./assets/layout/navBar/NavBar";
+import styled from "styled-components";
+
 
 
 function App() {
     return (
         <div className="App">
-            <SidebarLeft/>
-            <SidebarRight/>
-            <div>
-                <Header/>
-                <Main/>
-                <Services/>
-                <Price/>
-                <Recommendations/>
-                <Education/>
-                <WorkHistory/>
-                <Portfolio/>
-                <Blog/>
-                <Footer/>
-            </div>
+            <Sidebar/>
+            <MainContent>
+                    <Header/>
+                    <Main/>
+                    <Services/>
+                    <Price/>
+                    <Recommendations/>
+                    <Education/>
+                    <WorkHistory/>
+                    <Portfolio/>
+                    <Blog/>
+                    <Footer/>
+            </MainContent>
+            <NavBar/>
         </div>
     );
 }
 
 export default App;
+
+const MainContent = styled.main`
+    padding: 0 133px 0 330px;
+    max-width: 1440px;
+    outline: solid 3px #ffae00;
+`
 

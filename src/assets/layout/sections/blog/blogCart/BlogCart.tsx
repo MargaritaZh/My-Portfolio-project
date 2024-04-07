@@ -12,8 +12,8 @@ export const BlogCart = (props: BlogCartPropsType) => {
     return (
         <StyledBlogCart>
             <BlogCartImage src={props.src} alt=""/>
-            <BlogCartTitle>{props.title}</BlogCartTitle>
-            <BlogCartText>{props.text}</BlogCartText>
+            <Title>{props.title}</Title>
+            <Text>{props.text}</Text>
             <Link text={"Learn more"}/>
         </StyledBlogCart>
     );
@@ -35,6 +35,6 @@ const BlogCartImage = styled.img`
     object-fit: cover;
 `
 
-const BlogCartTitle=styled.h3``
+const Title=styled.h3``
 
-const BlogCartText=styled.p``
+const Text=styled.p``

@@ -21,20 +21,33 @@ export const Info = () => {
                 </StyledFormItem>
                 <StyledFormItem>
                     <StyledLabel htmlFor="userMessage">Your Message</StyledLabel>
-                    <StyledTextarea id="userMessage" name="user-message"  placeholder="message"></StyledTextarea>
+                    <StyledTextarea id="userMessage" name="user-message" placeholder="message"></StyledTextarea>
                 </StyledFormItem>
                 <Button text={"send message"}/>
             </StyledForm>
         </StyledInfo>
     );
 };
+const Input = ({label, as, ...rest}: any) => {
 
+    return <label>
+        {label}
+        {as === 'textarea'
+            ?
+            <textarea {...rest}>
+
+            </textarea>
+            :
+            <input {...rest}></input>
+        }
+    </label>
+}
 
 const StyledInfo = styled.div`
     min-width: 570px;
     background-color: aqua;
     min-height: 70vh;
-   
+
 `
 
 const Title = styled.h2``
@@ -52,17 +65,13 @@ const StyledForm = styled.form`
 `
 
 const StyledFormItem = styled.div`
-    /* Стили для элемента div */
-`;
+    display: flex;
+    flex-direction: column;
+`
 
-const StyledLabel = styled.label`
-    /* Стили для элемента label */
-`;
+const StyledLabel = styled.label``
 
-const StyledInput = styled.input`
-    /* Стили для поля ввода */
-`;
+const StyledInput = styled.input``
 
 const StyledTextarea = styled.textarea`
-    /* Стили для текстовой области */
-`;
+`
