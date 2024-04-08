@@ -19,7 +19,9 @@ export const GlobalStyle=createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-
+        
+        letter-spacing: 0%;
+        line-height: 1.2;
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
     }
@@ -37,11 +39,5 @@ export const GlobalStyle=createGlobalStyle`
         border: none;
     }
 
-    section {
 
-        // background-color: ${theme.colors.primaryBg};
-        //
-        // outline: solid 1px blue;
-        //
-    }
 `
