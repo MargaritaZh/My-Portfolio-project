@@ -7,9 +7,12 @@ export const StyledSection = styled.section`
     min-height: 100%;
     outline: solid 1px green;
     background-color: ${theme.colors.primaryBg};
+    margin-bottom: 70px;
+   
 
     &:first-child {
         background-color: ${theme.colors.secondaryBg};
+        margin-bottom: 135px;
     }
 
     @media screen and (min-width: 1440px) {
