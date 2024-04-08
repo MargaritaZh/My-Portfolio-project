@@ -51,6 +51,7 @@ const Line = styled.div<LineProps>`
             position: absolute;
             top: 1px;
             bottom: 1px;
+            z-index: 1;
         }
     }
 `

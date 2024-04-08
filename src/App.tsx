@@ -20,7 +20,7 @@ function App() {
         <div className="App">
             <Sidebar/>
             <MainContent>
-                    <Header/>
+                    {/*<Header/>*/}
                     <Main/>
                     <Services/>
                     <Price/>
@@ -38,25 +38,12 @@ function App() {
 
 export default App;
 
+
+
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
-
     outline: solid 3px #ffae00;
 `
 
-
-
-
-
-// const MainContent = styled.main`
-//
-//         max-width: 1873px;
-//         width: 100%;
-//         padding: 0 133px 0 330px;
-//         min-height: 100%;
-//         margin: 0 auto;
-//
-//         outline: solid 3px #171616;
-// `
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {DetailedHTMLProps, InputHTMLAttributes, ReactNode} from 'react';
 import styled from "styled-components";
 import {Button} from "../../../../../components/button/Button";
 
@@ -8,39 +8,81 @@ export const Info = () => {
             <Title>Leave us your info</Title>
             <StyledForm>
                 <StyledFormItem>
-                    <StyledLabel htmlFor="userName">Your Full Name ( Required)</StyledLabel>
-                    <StyledInput id="userName" type="text" name="user-name" placeholder="name"/>
+                    <Input
+                        id='userName'
+                        type="text"
+                        name="user-name"
+                        placeholder="name"
+                        label={
+                            <StyledLabel htmlFor="userName">Your Full Name ( Required)</StyledLabel>
+                        }
+                        as='input'
+                    />
                 </StyledFormItem>
                 <StyledFormItem>
-                    <StyledLabel htmlFor="userEmail">Your Email ( Required)</StyledLabel>
-                    <StyledInput id="userEmail" type="email" name="user-email" placeholder="email"/>
+                    <Input
+                        id='userEmail'
+                        type="email"
+                        name="user-email"
+                        placeholder="email"
+                        label={
+                            <StyledLabel htmlFor="userEmail">Your Email ( Required)</StyledLabel>
+                        }
+                        as='input'
+                    />
                 </StyledFormItem>
                 <StyledFormItem>
-                    <StyledLabel htmlFor="userSubject">Subject</StyledLabel>
-                    <StyledInput id="userSubject" type="text" name="user-subject" placeholder="subject"/>
+                    <Input
+                        id='userSubject'
+                        type="text"
+                        name="user-subject"
+                        placeholder="subject"
+                        label={
+                            <StyledLabel htmlFor="userSubject">Subject</StyledLabel>
+                        }
+                        as='input'
+                    />
                 </StyledFormItem>
                 <StyledFormItem>
-                    <StyledLabel htmlFor="userMessage">Your Message</StyledLabel>
-                    <StyledTextarea id="userMessage" name="user-message" placeholder="message"></StyledTextarea>
+                    <Input
+                        id='userMessage'
+                        name="user-message"
+                        placeholder="message"
+                        label={
+                            <StyledLabel htmlFor="userMessage">Your Message</StyledLabel>
+                        }
+                        as='textarea'
+                    />
                 </StyledFormItem>
                 <Button text={"send message"}/>
             </StyledForm>
         </StyledInfo>
     );
 };
-const Input = ({label, as, ...rest}: any) => {
 
-    return <label>
-        {label}
-        {as === 'textarea'
-            ?
-            <textarea {...rest}>
+
+type DefaultInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement>, HTMLInputElement | HTMLTextAreaElement>
+
+interface IProps extends DefaultInputProps {
+    label: ReactNode
+    as: 'textarea' | 'input'
+}
+
+const Input = ({label, as, ref, ...rest}: IProps) => {
+
+    return (
+        <label>
+            {label}
+            {as === 'textarea'
+                ?
+                <textarea {...rest}>
 
             </textarea>
-            :
-            <input {...rest}></input>
-        }
-    </label>
+                :
+                <input {...rest}></input>
+            }
+        </label>
+    )
 }
 
 const StyledInfo = styled.div`
@@ -64,14 +106,10 @@ const StyledForm = styled.form`
     gap: 20px;
 `
 
-const StyledFormItem = styled.div`
-    display: flex;
-    flex-direction: column;
-`
+const StyledFormItem = styled.div``
 
 const StyledLabel = styled.label``
 
-const StyledInput = styled.input``
 
-const StyledTextarea = styled.textarea`
-`
+
+

@@ -3,11 +3,12 @@ import styled from "styled-components";
 import mainPhoto from "../../../images/main-photo.png"
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Button} from "../../../../components/button/Button";
+import {StyledSection} from "../../../../components/StyledSection";
 
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <StyledSection>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <TextBlock>
                         <MainTitle>I’m Rayan Adlrdard Front-end Developer</MainTitle>
@@ -19,14 +20,10 @@ export const Main = () => {
                     </TextBlock>
                     <Photo src={mainPhoto} alt="main photo"/>
                 </FlexWrapper>
-        </StyledMain>
+        </StyledSection>
     );
 };
 
-const StyledMain = styled.section`
-    background-color: #aad9d9;
-    min-height: 60vh;
-`
 
 const TextBlock = styled.div``
 
