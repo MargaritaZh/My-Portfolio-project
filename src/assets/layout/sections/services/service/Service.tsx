@@ -37,7 +37,7 @@ const StyledService = styled.div`
     
     padding: 25px;
     outline: solid 1px rebeccapurple;
-   
+    
 `
 
 const ServiceTitle = styled.h3`

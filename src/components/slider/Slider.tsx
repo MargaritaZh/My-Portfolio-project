@@ -42,8 +42,11 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-    border: solid 1px red;
-    max-width: 970px;
+    outline: solid 1px red;
+   max-width: 970px;
+
+    margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +54,10 @@ const StyledSlider = styled.div`
 `
 const Pagination = styled.div`
 
+    
     span {
+        
+        
         display: inline-block;
         width: 20px;
         height: 20px;

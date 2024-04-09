@@ -10,4 +10,10 @@ export const RatingStar = () => {
     );
 };
 
-const StyledRatingStar=styled.li``
+const StyledRatingStar=styled.li`
+
+    & +li{
+        margin-left: 10px;
+    }
+
+`

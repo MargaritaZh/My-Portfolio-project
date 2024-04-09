@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Rating} from "./rating/Rating";
 import {FlexWrapper} from "../../FlexWrapper";
+import {theme} from "../../../styles/Theme";
 
 type SlidPropsType = {
     reviewTitle: string
@@ -17,28 +18,49 @@ export const Slid = (props: SlidPropsType) => {
             <Rating/>
             <Title>{props.reviewTitle}</Title>
             <Text>{props.reviewDescription}</Text>
-            <FlexWrapper>
+            <BlockWrapper>
                 <Image src={props.src} alt=""/>
-                <FlexWrapper direction={"column"}>
+                <Wrapper>
                     <Name>{props.name}</Name>
                     <Profession>{props.profession}</Profession>
-                </FlexWrapper>
-            </FlexWrapper>
+                </Wrapper>
+            </BlockWrapper>
         </StyledSlid>
     );
 };
 
 const StyledSlid = styled.div`
-    background-color: #97e397;
-    max-width: 310px;
+   
+    background-color: ${theme.colors.secondaryBg};
+    width: 310px;
     min-height: 323px;
     
-    margin: 10px;
+    & + div {
+    margin-left: 20px;
+    }
+    
+    padding: 25px;
 `
 
-const Title= styled.h3``
+const Title= styled.h3`
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 18px;
+`
 
-const Text=styled.p``
+const Text=styled.p`
+    font-size: 15px;
+    font-weight: 400;
+    color: ${theme.colors.fontDescription};
+    margin-bottom: 30px;
+    
+`
+
+const BlockWrapper=styled.div`
+    display: flex;
+    gap:25px;
+`
+
 
 const Image=styled.img`
     height: 80px;
@@ -47,7 +69,21 @@ const Image=styled.img`
     object-fit: cover;
     border-radius: 50%;
 `
-const Name=styled.span``
 
-const Profession =styled.span``
+const Wrapper=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+`
+
+const Name=styled.span`
+    font-size: 18px;
+    font-weight: 500;
+`
+
+const Profession =styled.span`
+    color: ${theme.colors.fontDescription};
+    font-size: 15px;
+    font-weight: 400;
+`
 
