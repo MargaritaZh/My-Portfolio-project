@@ -16,13 +16,15 @@ export const Link = (props:{
     );
 };
 
-const StyledServiceLink = styled.a``
+const StyledServiceLink = styled.a`
+    display: flex;
+    align-items: center;
+`
 
 const Text = styled.span`
     color: ${theme.colors.accent};
     font-family: "Roboto",sans-serif;
     font-size: 12px;
     font-weight: 700;
-    text-align: left;
 `
 

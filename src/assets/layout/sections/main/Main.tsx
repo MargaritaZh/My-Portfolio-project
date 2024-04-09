@@ -17,7 +17,7 @@ export const Main = () => {
                             lobortis.
                             Natoque rutrum semper sed suspendisse nunc lectus.
                         </Text>
-                        <Button text={"HIRE ME"} iconId={"btnHireMe"} height={"12"} width={"12"} viewBox={"0 0 12 12"}/>
+                        <Button text={"HIRE ME"} iconId={"btnHireMe"} height={"12"} width={"12"} viewBox={"0 0 12 12"}  btnType="mainBtn"/>
                     </TextBlock>
                     <Photo src={mainPhoto} alt="main photo"/>
                 </FlexWrapper>
