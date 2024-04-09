@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {Icon} from "../../../../../components/icon/Icon";
 import {Button} from "../../../../../components/button/Button";
 import {theme} from "../../../../../styles/Theme";
-import {SectionTextDescription} from "../../../../../components/SectionTextDescription";
 
 type PriceCardPropsType = {
 
@@ -51,7 +50,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
 
     return (
         <StyledPriceCard>
-            {props.showMostPopular && <span>Most Popular</span>}
+            {props.showMostPopular && <PopularText>Most Popular</PopularText>}
             <CardTitle>{props.title}</CardTitle>
             <Wrapper>
                 <h2>{props.price}</h2>
@@ -68,7 +67,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
                 ))}
 
             </ListItem>
-            <Button text={"ORDER NOW"}/>
+            <Button btnType={"priceBtn"} text={"ORDER NOW"}/>
         </StyledPriceCard>
     );
 };
@@ -81,7 +80,26 @@ const StyledPriceCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    position: relative;
+    z-index: 0;
+    
 
+`
+
+const PopularText=styled.span`color: rgb(43, 43, 43);
+    font-size: 15px;
+    font-weight: 400;
+    background-color: ${theme.colors.accent};
+    text-align: center;
+    padding: 3px 0;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
 `
 const CardTitle=styled.h3`
     color: ${theme.colors.font};

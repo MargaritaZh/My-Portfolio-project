@@ -14,7 +14,7 @@ type ButtonPropsType = {
     // variant?: string
 
 
-    btnType?: "mainBtn" | "outlined"
+    btnType?: "mainBtn" | "priceBtn"
     active?: boolean
 
 }
@@ -39,7 +39,7 @@ const TextButton = styled.span`
 type StyledBtnPropsType = {
     color?: string
     fontSize?: string
-    btnType?: "mainBtn" | "outlined"
+    btnType?: "mainBtn" | "priceBtn"
     active?:boolean
 
 }
@@ -51,7 +51,7 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
     display: flex;
     align-items: center;
     gap: 11px;
-    
+
 
     //mainBtn
     ${props => props.btnType === "mainBtn" && css<StyledBtnPropsType>`
@@ -76,19 +76,34 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
             font-size: 24px;
             font-weight: 700;
         }
-    `} //outlined
-    ${props => props.btnType === "outlined" && css<StyledBtnPropsType>`
-        border: 2px solid ${props => props.color || "hotpink"};
-        color: ${props => props.color || "hotpink"};
-        background-color: transparent;
+    `} 
+            
+            //priceBtn
+    
+    ${props => props.btnType === "priceBtn" && css<StyledBtnPropsType>`
 
+        border-radius: 30px;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+        background-color: ${theme.colors.secondaryBg};
+        padding: 11px 41px;
+        border: 1px solid ${theme.colors.secondaryBg};
+        height: 38px;
+        width: 169px;
+
+        color: ${theme.colors.font}
+        font-size: 14px;
+        font-weight: 700;
+        
+        &:nth-child(even) {
+            background-color: ${theme.colors.accent};
+        }
+        
         &:hover {
-            border-color: blue;
-            color: blue;
-            background-color: transparent;
+            cursor: pointer;
         }
     `}
 
+    
     ${props => props.active && css<StyledBtnPropsType>`
         box-shadow: 5px 5px 5px 5px grey;
     `}
