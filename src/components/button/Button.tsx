@@ -66,6 +66,7 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
         color: ${theme.colors.font}
         font-size: 16px;
         font-weight: 500;
+        text-transform: uppercase;
 
 
         &:hover {
@@ -93,6 +94,7 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
         color: ${theme.colors.font}
         font-size: 14px;
         font-weight: 700;
+        text-transform: uppercase;
         
         &:nth-child(even) {
             background-color: ${theme.colors.accent};

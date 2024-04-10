@@ -16,15 +16,16 @@ export const Link = (props:{
     );
 };
 
-const StyledServiceLink = styled.a`
+export const StyledServiceLink = styled.a`
     display: flex;
     align-items: center;
 `
 
-const Text = styled.span`
+export  const Text = styled.span`
     color: ${theme.colors.accent};
     font-family: "Roboto",sans-serif;
     font-size: 12px;
     font-weight: 700;
+    text-transform: uppercase;
 `
 

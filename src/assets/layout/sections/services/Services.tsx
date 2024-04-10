@@ -5,6 +5,7 @@ import {Service} from "./service/Service";
 import {SectionTextDescription} from "../../../../components/SectionTextDescription";
 import {StyledSection} from "../../../../components/StyledSection";
 import {SectionWrapperTitleAndText} from "../../../../components/SectionWrapperTitleAndText";
+import styled from "styled-components";
 
 
 export const Services = () => {
@@ -16,7 +17,7 @@ export const Services = () => {
                     officia consequat duis
                     enim velit mollit. lorem ipsum</SectionTextDescription>
             </SectionWrapperTitleAndText>
-            <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+            <ServicesWrapper>
                 <Service
                     iconId="coding" height="68" width="68" viewBox="0 0 68 68"
                     title="Web Development"
@@ -53,14 +54,20 @@ export const Services = () => {
                     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. "
                     isLink={true}
                 />
-            </FlexWrapper>
+            </ServicesWrapper>
         </StyledSection>
     );
 };
 
 
-
-
+const ServicesWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 470px;
+    outline: 3px solid blue;
+`
 
 
 

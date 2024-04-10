@@ -22,6 +22,7 @@ export const GlobalStyle=createGlobalStyle`
         
         letter-spacing: 0%;
         line-height: 1.2;
+        text-transform: capitalize;
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
     }

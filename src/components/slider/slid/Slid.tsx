@@ -51,6 +51,7 @@ const Title= styled.h3`
 const Text=styled.p`
     font-size: 15px;
     font-weight: 400;
+    line-height: 1.6;
     color: ${theme.colors.fontDescription};
     margin-bottom: 30px;
     

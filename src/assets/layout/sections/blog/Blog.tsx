@@ -13,14 +13,18 @@ import logoImage1 from "../../../images/blog-images/logo-image-1.png"
 import logoImage2 from "../../../images/blog-images/logo-image-2.png"
 import logoImage3 from "../../../images/blog-images/logo-image-3.png"
 import logoImage4 from "../../../images/blog-images/logo-image-4.png"
+import {StyledSection} from "../../../../components/StyledSection";
+import {SectionWrapperTitleAndText} from "../../../../components/SectionWrapperTitleAndText";
 
 export const Blog = () => {
     return (
-        <StyledBlog>
-            <SectionTitle>Blog</SectionTitle>
-            <SectionTextDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-                officia consequat duis enim velit mollit. lorem ipsum</SectionTextDescription>
-            <FlexWrapper justify={"center"}>
+        <StyledSection>
+            <SectionWrapperTitleAndText>
+                <SectionTitle>Blog</SectionTitle>
+                <SectionTextDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                    officia consequat duis enim velit mollit. lorem ipsum</SectionTextDescription>
+            </SectionWrapperTitleAndText>
+            <FlexWrapper justify={"space-between"}>
                 <BlogCart
                     src={blogCartImage1}
                     title={"How to make web tempates"}
@@ -52,14 +56,11 @@ export const Blog = () => {
                 <Image src={logoImage3} alt=""/>
                 <Image src={logoImage4} alt=""/>
             </FlexWrapper>
-        </StyledBlog>
+        </StyledSection>
     );
 };
 
-const StyledBlog = styled.section`
-    background-color: #7f917f;
-    min-height: 100vh;
-`
+
 
 const StyledMap = styled.iframe`
     

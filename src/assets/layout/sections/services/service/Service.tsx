@@ -23,17 +23,17 @@ export const Service = ({ iconId, height, width, viewBox, title, text, isLink = 
                 )}
                 <ServiceTitle>{title}</ServiceTitle>
                 <ServiceText>{text}</ServiceText>
-                {isLink && (<Link text={"arrow now"}/>)}
+                {isLink && (<Link text={"ORDER NOW"}/>)}
             </FlexWrapper>
         </StyledService>
     );
 };
 
 const StyledService = styled.div`
-    width: 310px;
+    max-width: 310px;
+    width: 100%;
     min-height: 225px;
     background-color: ${theme.colors.secondaryBg};
-    
     
     padding: 25px;
     outline: solid 1px rebeccapurple;

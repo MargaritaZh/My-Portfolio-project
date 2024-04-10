@@ -10,16 +10,17 @@ export const PortfolioWork = (props: { src: string }) => {
 };
 
 const StyledPortfolioWork = styled.div`
-    border: solid 1px red;
-    background-color: hotpink;
+    outline: solid 1px red;
     
+    min-height: 300px;
     max-width: 310px;
     width: 100%;
-    margin: 10px;
+    
+   
 `
 
 const Image = styled.img`
-    height: 300px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 `
