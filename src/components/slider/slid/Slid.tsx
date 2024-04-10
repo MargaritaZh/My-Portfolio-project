@@ -84,6 +84,7 @@ const Name=styled.span`
 
 const Profession =styled.span`
     color: ${theme.colors.fontDescription};
+    line-height: 1.6;
     font-size: 15px;
     font-weight: 400;
 `

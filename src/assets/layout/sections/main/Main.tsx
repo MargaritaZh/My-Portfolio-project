@@ -48,6 +48,7 @@ const MainTitle = styled.h1`
 const Text = styled.p`
     font-size: 16px;
     font-weight: 400;
+    line-height: 1.6;
     text-align: left;
     color:${theme.colors.fontDescription};
     

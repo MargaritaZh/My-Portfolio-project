@@ -4,6 +4,7 @@ import {theme} from "../styles/Theme";
 export const SectionTextDescription = styled.p`
     font-size: 15px;
     font-weight: 400;
+    line-height: 1.6;
     text-align: center;
     color:${theme.colors.fontDescription};
     

@@ -44,6 +44,7 @@ const ServiceTitle = styled.h3`
     font-size: 18px;
     font-weight: 500;
     
+    
 `
 
 const ServiceText = styled.p`
@@ -51,6 +52,7 @@ const ServiceText = styled.p`
     
     font-size: 15px;
     font-weight: 400;
+    line-height: 1.6;
     text-align: center;
 
 `

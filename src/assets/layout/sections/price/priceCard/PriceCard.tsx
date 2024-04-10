@@ -53,8 +53,8 @@ export const PriceCard = (props: PriceCardPropsType) => {
             {props.showMostPopular && <PopularText>Most Popular</PopularText>}
             <CardTitle>{props.title}</CardTitle>
             <Wrapper>
-                <h2>{props.price}</h2>
-                <span>/Hour</span>
+                <CostOfWork>{props.price}</CostOfWork>
+                <Time>/Hour</Time>
             </Wrapper>
             <TextDescription>For most businesses that want to optimize web queries</TextDescription>
             <ListItem>
@@ -62,7 +62,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
                     <Item key={index}>
                         <Icon width={"24"} height={"25"} viewBox={"0 0 25 24"}
                               iconId={index >= props.iconTypeBoundary ? "close" : feature.iconId}/>
-                        <span>{feature.text}</span>
+                        <ItemText>{feature.text}</ItemText>
                     </Item>
                 ))}
 
@@ -90,6 +90,7 @@ const StyledPriceCard = styled.div`
 const PopularText=styled.span`color: rgb(43, 43, 43);
     font-size: 15px;
     font-weight: 400;
+    line-height: 1.6;
     background-color: ${theme.colors.accent};
     text-align: center;
     padding: 3px 0;
@@ -107,6 +108,17 @@ const CardTitle=styled.h3`
     font-weight: 600;
     margin-bottom: 19px;
 `
+const CostOfWork=styled.h2`
+    font-size: 32px;
+    font-weight: 700;
+`
+const Time=styled.span`
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+`
+
+
 
 const Wrapper=styled.div`
 display: flex;
@@ -120,19 +132,25 @@ const TextDescription=styled.p`
     color: ${theme.colors.fontDescription};
     font-size: 15px;
     font-weight: 400;
+    line-height: 1.6;
     text-align: center;
     margin-bottom: 21px;
 `
 
 const ListItem=styled.ul`
-display: flex;
+    display: flex;
     flex-direction: column;
-    gap:16px;
-    
+    gap: 16px;
+
     margin-bottom: 21px;
 `
 const Item=styled.li`
-  display: flex;
+    display: flex;
     align-items: center;
-    gap:15px;
+    gap: 15px;
+`
+const ItemText=styled.span`
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
 `
