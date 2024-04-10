@@ -74,6 +74,7 @@ const Wrapper=styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 18px 0 11px;
 `
 
 const Name=styled.span`

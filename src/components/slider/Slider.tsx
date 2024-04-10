@@ -5,6 +5,7 @@ import reviewImage1 from "../../assets/images/recommendations-images/James-photo
 import reviewImage2 from "../../assets/images/recommendations-images/Tiana-photo.webp"
 import reviewImage3 from "../../assets/images/recommendations-images/Talan-photo.webp"
 import {FlexWrapper} from "../FlexWrapper";
+import {theme} from "../../styles/Theme";
 
 export const Slider = () => {
     return (
@@ -34,7 +35,7 @@ export const Slider = () => {
             </FlexWrapper>
             <Pagination>
                 <span> </span>
-                <span> </span>
+                <span className={"active"}> </span>
                 <span> </span>
             </Pagination>
         </StyledSlider>
@@ -54,14 +55,23 @@ const StyledSlider = styled.div`
 `
 const Pagination = styled.div`
 
-    
+    margin-top: 50px;
+
     span {
-        
-        
         display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin: 5px;
-        background-color: chartreuse;
+        width: 10px;
+        height: 10px;
+        background-color: ${theme.colors.accent};
+        border-radius: 50%;
+
+        & + span {
+            margin-left: 5px;
+        }
+
+        &.active {
+            background-color: #d0947e;
+            width: 20px;
+        }
+
     }
 `
