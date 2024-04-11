@@ -16,7 +16,7 @@ export const BlogCart = (props: BlogCartPropsType) => {
             <Description>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
-                <Link text={"Learn more"}/>
+                <Link text={"Learn more"} linkType={"blogLink"}/>
             </Description>
         </StyledBlogCart>
     );

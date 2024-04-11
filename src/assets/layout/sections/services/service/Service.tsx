@@ -23,7 +23,7 @@ export const Service = ({ iconId, height, width, viewBox, title, text, isLink = 
                 )}
                 <ServiceTitle>{title}</ServiceTitle>
                 <ServiceText>{text}</ServiceText>
-                {isLink && (<Link text={"ORDER NOW"}/>)}
+                {isLink && (<Link text={"ORDER NOW"} linkType={"serviceLink"}/>)}
             </FlexWrapper>
         </StyledService>
     );
