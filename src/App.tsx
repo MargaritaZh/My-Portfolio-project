@@ -9,7 +9,7 @@ import {WorkHistory} from "./assets/layout/sections/workHistory/WorkHistory";
 import {Recommendations} from "./assets/layout/sections/recommendations/Recommendations";
 import {Footer} from "./assets/layout/footer/Footer";
 import {Price} from "./assets/layout/sections/price/Price";
-import {Sidebar} from "./assets/layout/sidebarLeft/Sidebar";
+import {Sidebar} from "./assets/layout/sidebar/Sidebar";
 import {NavBar} from "./assets/layout/navBar/NavBar";
 import styled from "styled-components";
 

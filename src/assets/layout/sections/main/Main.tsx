@@ -5,11 +5,13 @@ import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Button} from "../../../../components/button/Button";
 import {StyledSection} from "../../../../components/StyledSection";
 import {theme} from "../../../../styles/Theme";
+import {Container} from "../../../../components/Container";
 
 
 export const Main = () => {
     return (
         <StyledSection>
+            <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <TextBlock>
                         <MainTitle>I’m Rayan Adlrdard <span>Front-end</span> Developer</MainTitle>
@@ -21,6 +23,7 @@ export const Main = () => {
                     </TextBlock>
                     <Photo src={mainPhoto} alt="main photo"/>
                 </FlexWrapper>
+            </Container>
         </StyledSection>
     );
 };

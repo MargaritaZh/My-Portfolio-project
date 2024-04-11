@@ -13,7 +13,6 @@ type ButtonPropsType = {
 
     // variant?: string
 
-
     btnType?: "mainBtn" | "priceBtn"
     active?: boolean
 
@@ -33,7 +32,6 @@ export const Button = ({text, iconId, height, width, viewBox,btnType,active,}: B
 
 
 const TextButton = styled.span`
-    font-family: "Inter",sans-serif;
 `
 
 type StyledBtnPropsType = {
@@ -70,7 +68,6 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
 
 
         &:hover {
-            cursor: pointer;
             height: 64px;
             width: 202px;
             color: ${theme.colors.secondaryBg};
@@ -86,10 +83,8 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
         border-radius: 30px;
         box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
         background-color: ${theme.colors.secondaryBg};
-        padding: 11px 41px;
+        padding: 10px 40px;
         border: 1px solid ${theme.colors.secondaryBg};
-        height: 38px;
-        width: 169px;
 
         color: ${theme.colors.font}
         font-size: 14px;
@@ -101,7 +96,7 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
         }
         
         &:hover {
-            cursor: pointer;
+            
         }
     `}
 

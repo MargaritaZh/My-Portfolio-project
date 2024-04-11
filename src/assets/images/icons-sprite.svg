@@ -232,7 +232,7 @@
         </defs>
     </g>
 
-<!--    ivon Extra Skills-->
+    <!--    ivon Extra Skills-->
     <g id="skills">
         <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
         <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
@@ -240,17 +240,18 @@
         <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
     </g>
 
-<!--    icon button download-->
-<g id="btnDownload">
-    <g clip-path="url(#clip0_1_226)">
-        <path d="M2.33329 12.9523H11.6666V8.28564H12.8333V13.619C12.8333 13.7958 12.7718 13.9654 12.6624 14.0904C12.553 14.2154 12.4047 14.2856 12.25 14.2856H1.74996C1.59525 14.2856 1.44688 14.2154 1.33748 14.0904C1.22808 13.9654 1.16663 13.7958 1.16663 13.619V8.28564H2.33329V12.9523ZM8.16663 6.28564H11.0833L6.99996 10.9523L2.91663 6.28564H5.83329V2.28564H8.16663V6.28564Z" fill="#2B2B2B"/>
+    <!--    icon button download-->
+    <g id="btnDownload">
+        <g clip-path="url(#clip0_1_226)">
+            <path d="M2.33329 12.9523H11.6666V8.28564H12.8333V13.619C12.8333 13.7958 12.7718 13.9654 12.6624 14.0904C12.553 14.2154 12.4047 14.2856 12.25 14.2856H1.74996C1.59525 14.2856 1.44688 14.2154 1.33748 14.0904C1.22808 13.9654 1.16663 13.7958 1.16663 13.619V8.28564H2.33329V12.9523ZM8.16663 6.28564H11.0833L6.99996 10.9523L2.91663 6.28564H5.83329V2.28564H8.16663V6.28564Z"
+                  fill="#2B2B2B"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_1_226">
+                <rect width="14" height="16" fill="white" transform="translate(0 0.285645)"/>
+            </clipPath>
+        </defs>
     </g>
-    <defs>
-        <clipPath id="clip0_1_226">
-            <rect width="14" height="16" fill="white" transform="translate(0 0.285645)"/>
-        </clipPath>
-    </defs>
-</g>
 
     <!--    vector button-->
     <g id="btnHireMe">
@@ -350,4 +351,16 @@
         </defs>
     </g>
 
+    <!--button portfolio-->
+    <g id="portfolioBtn">
+        <g clip-path="url(#clip0_10_1504)">
+            <path d="M23.8334 23.8333V10.8333H28.1667V23.8333H41.1667V28.1666H28.1667V41.1666H23.8334V28.1666H10.8334V23.8333H23.8334Z"
+                  fill="#2B2B2B"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_10_1504">
+                <rect width="52" height="52" fill="white"/>
+            </clipPath>
+        </defs>
+    </g>
 </svg>

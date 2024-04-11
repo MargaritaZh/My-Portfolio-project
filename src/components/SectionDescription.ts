@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
-export const SectionTextDescription = styled.p`
+export const SectionDescription = styled.p`
     font-size: 15px;
     font-weight: 400;
     line-height: 1.6;
