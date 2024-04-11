@@ -27,7 +27,7 @@ export const Blog = () => {
                         Velit
                         officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
                 </SectionTitle>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper justify={"space-between"} align={"flex-start"}>
                     <BlogCart
                         src={blogCartImage1}
                         title={"How to make web tempates"}

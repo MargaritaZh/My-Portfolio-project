@@ -17,7 +17,7 @@ export const EducationAndWorkHistoryCard = (props: EducationAndWorkHistoryCardPr
         <StyledEducationAndWorkHistoryCard>
             <LeftSideCard>
                 <Title>{props.leftTitle}</Title>
-                <FlexWrapper align={"center"}>
+                <FlexWrapper align={"flex-start"}>
                     <Status>{props.status}</Status>
                     <PeriodOfStudy>{props.periodOfStudy}</PeriodOfStudy>
                 </FlexWrapper>
@@ -65,8 +65,6 @@ const Status = styled.span`
     font-weight: 400;
     line-height: 1.6;
     margin-right: 21px;
-    align-self: flex-start;
-
 `
 
 const PeriodOfStudy = styled.span`
@@ -79,9 +77,7 @@ const PeriodOfStudy = styled.span`
     line-height: 1;
     border-radius: 1px;
     background-color: ${theme.colors.accent};
-    align-self: flex-start;
-
-   
+    
 `
 
 
