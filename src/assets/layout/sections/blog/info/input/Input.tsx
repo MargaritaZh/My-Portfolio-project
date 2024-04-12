@@ -76,7 +76,7 @@ const StyledInput = styled.input`
   
     &::placeholder{
         color: ${theme.colors.accent};
-        text-transform: capitalize;
+        text-transform: lowercase;
     }
     
     &:focus-visible{

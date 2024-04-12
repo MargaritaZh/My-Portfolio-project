@@ -20,8 +20,8 @@ export const ContactInfoCard = (props: ContactInfoCardPropsType) => {
             <ContentWrapper>
                 {props.items.map((info, index) => (
                     <Wrapper key={index}>
-                        <Text>{info.label}</Text>
-                        <Text>{info.value}</Text>
+                        <LeftText>{info.label}</LeftText>
+                        <RightText>{info.value}</RightText>
                     </Wrapper>
                 ))}
             </ContentWrapper>
@@ -33,7 +33,7 @@ export const ContactInfoCard = (props: ContactInfoCardPropsType) => {
 
 const StyledContactInfoCard = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    min-height: 210px;
+    max-height: 210px;
     width: 100%;
     padding: 25px 25px 16px;
 
@@ -69,6 +69,14 @@ const Wrapper = styled.div`
         margin-top: 16px;
     }
 `
-const Text = styled.span`
-
+const LeftText = styled.span`
+    color: ${theme.colors.fontDescription};
+    font-size: 18px;
+    font-weight: 500;
+`
+const RightText = styled.span`
+    color: ${theme.colors.fontDescription};
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
 `
