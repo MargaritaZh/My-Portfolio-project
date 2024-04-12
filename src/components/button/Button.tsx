@@ -13,7 +13,7 @@ type ButtonPropsType = {
 
     // variant?: string
 
-    btnType?: "mainBtn" | "priceBtn"
+    btnType?: "mainBtn" | "priceBtn"| "infoBtn"
     active?: boolean
 
 }
@@ -37,7 +37,7 @@ const TextButton = styled.span`
 type StyledBtnPropsType = {
     color?: string
     fontSize?: string
-    btnType?: "mainBtn" | "priceBtn"
+    btnType?: "mainBtn" | "priceBtn" | "infoBtn"
     active?:boolean
 
 }
@@ -99,6 +99,26 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
             
         }
     `}
+    
+    //infoBtn
+    ${props => props.btnType === "infoBtn" && css<StyledBtnPropsType>`
+        
+        padding: 9px 0 9px 24px;
+        width: 159px;
+        height: 35px;
+
+        background-color: ${theme.colors.accent};
+        
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        text-transform: uppercase;
+        
+        &:hover {
+            color: ${theme.colors.secondaryBg};
+        }
+    `}
+    
 
     
     ${props => props.active && css<StyledBtnPropsType>`

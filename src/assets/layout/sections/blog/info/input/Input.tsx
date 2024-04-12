@@ -26,6 +26,7 @@
 
 import React, { DetailedHTMLProps, InputHTMLAttributes, ReactNode, forwardRef, Ref } from "react";
 import styled from "styled-components";
+import {theme} from "../../../../../../styles/Theme";
 
 type DefaultInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
@@ -52,16 +53,61 @@ export const Input = forwardRef(({ label, as, ...rest }: IProps, ref: Ref<HTMLIn
 const InputContainer = styled.label`
     display: flex;
     flex-direction: column;
-`;
+`
 
 const InputLabel = styled.span`
-    margin-bottom: 4px;
-`;
+    color: ${theme.colors.fontDescription};
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+`
 
 const StyledInput = styled.input`
-    /* Your styles for input */
-`;
+    padding: 7px 15px;
+    width: 100%;
+    height: 50px;
+    background: ${theme.colors.primaryBg};
+    border: solid 1px ${theme.colors.primaryBg};
+
+    font-family: "Inter",sans-serif;
+    color: ${theme.colors.fontDescription};
+    font-size: 18px;
+    font-weight: 500;
+  
+    &::placeholder{
+        color: ${theme.colors.accent};
+        text-transform: capitalize;
+    }
+    
+    &:focus-visible{
+        outline: 1px solid ${theme.colors.accent};
+    }
+    
+`
 
 const StyledTextarea = styled.textarea`
-    /* Your styles for textarea */
-`;
+    padding: 7px 15px;
+    width: 100%;
+    min-height: 210px;
+    background: ${theme.colors.primaryBg};
+    border: solid 1px ${theme.colors.primaryBg};
+
+    font-family: "Inter",sans-serif;
+    color: ${theme.colors.fontDescription};
+    font-size: 18px;
+    font-weight: 500;
+
+    resize: none;
+
+    &::placeholder{
+        color: ${theme.colors.accent};
+        text-transform: capitalize;
+    }
+
+    &:focus-visible{
+        outline: 1px solid ${theme.colors.accent};
+    }
+  
+`
+
+

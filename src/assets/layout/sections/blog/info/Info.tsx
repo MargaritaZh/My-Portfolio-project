@@ -47,12 +47,11 @@ export const Info = () => {
                         }
                         as='textarea'
                     />
-                <Button text={"send message"}/>
+                <Button text={"send message"} btnType={"infoBtn"}/>
             </StyledForm>
         </StyledInfo>
     );
 };
-
 
 const StyledInfo = styled.div`
     max-width: 570px;
@@ -67,10 +66,7 @@ const Title = styled.h2`
     margin-bottom: 50px;
 `
 
-
 const StyledForm = styled.form`
-
-    outline: solid 1px red;
     background-color: ${theme.colors.secondaryBg};
     width: 100%;
     padding: 25px;
@@ -78,12 +74,9 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: 25px;
-
 `
 
-const StyledLabel = styled.label`
-    outline: solid 1px greenyellow;
-`
+const StyledLabel = styled.label``
 
 
 
