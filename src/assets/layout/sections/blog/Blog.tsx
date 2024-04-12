@@ -53,12 +53,12 @@ export const Blog = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 ></StyledMap>
-                <FlexWrapper justify={"space-between"}>
+                <ImageWrapper>
                     <Image src={logoImage1} alt=""/>
                     <Image src={logoImage2} alt=""/>
                     <Image src={logoImage3} alt=""/>
                     <Image src={logoImage4} alt=""/>
-                </FlexWrapper>
+                </ImageWrapper>
             </Container>
         </StyledSection>
     );
@@ -68,10 +68,17 @@ const InfoWrapper=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 70px;
+    margin: 70px 0 70px;
+    
 `
 
 const StyledMap = styled.iframe``
+
+const ImageWrapper=styled.div`
+    margin: 70px 0 70px;
+    display: flex;
+    justify-content: space-between;
+`
 
 const Image = styled.img`
     height: 140px;

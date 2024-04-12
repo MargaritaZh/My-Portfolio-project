@@ -32,6 +32,9 @@ export const Button = ({text, iconId, height, width, viewBox,btnType,active,}: B
 
 
 const TextButton = styled.span`
+    
+    
+    
 `
 
 type StyledBtnPropsType = {
