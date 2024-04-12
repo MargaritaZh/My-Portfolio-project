@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {ContactInfoCard} from "./contactInfoCard/ContactInfoCard";
+import {theme} from "../../../../../styles/Theme";
 
 const cardData = [
     {
@@ -14,7 +15,7 @@ const cardData = [
         info: [
             { label: "Email", value: "youremail@gmail.com" },
             { label: "Skype", value: "@yourusername" },
-            { label: "@yourusername", value: "@yourusername" }
+            { label: "Telegram:", value: "@yourusername" }
         ]
     },
     {
@@ -38,10 +39,21 @@ export const ContactInfo = () => {
 };
 
 const StyledContactInfo = styled.div`
-    background-color: #88b988;
+    background-color: ${theme.colors.primaryBg};
     min-height: 756px;
+    max-width: 370px;
+    width: 100%;
+
+    outline: 1px solid greenyellow;
+    
 `
 
 
-const Title = styled.h2``
+const Title = styled.h2`
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+`
+
 
