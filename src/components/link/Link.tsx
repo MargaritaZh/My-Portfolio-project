@@ -40,6 +40,8 @@ export const StyledServiceLink = styled.a<LinkPropsType>`
                 font-weight: 500;
                 text-transform: capitalize;
             `}
+    
+    
 `;
 
 export const Text = styled.span``

@@ -41,10 +41,10 @@ export const Blog = () => {
                         title={"How to make Flyer Design"}
                         text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
                 </FlexWrapper>
-                <FlexWrapper justify={"center"}>
+                <InfoWrapper>
                     <Info/>
                     <ContactInfo/>
-                </FlexWrapper>
+                </InfoWrapper>
                 <StyledMap
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71372.78905234985!2d-122.48542393632403!3d37.76046744969168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2z0KHQsNC9LdCk0YDQsNC90YbQuNGB0LrQviwg0JrQsNC70LjRhNC-0YDQvdC40Y8sINCh0KjQkA!5e0!3m2!1sru!2sby!4v1712178028154!5m2!1sru!2sby"
                     width="100%" height="300"
@@ -64,9 +64,13 @@ export const Blog = () => {
     );
 };
 
-
-const StyledMap = styled.iframe`
+const InfoWrapper=styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
 `
+
+const StyledMap = styled.iframe``
 
 const Image = styled.img`
     height: 140px;
@@ -74,3 +78,4 @@ const Image = styled.img`
     width: 100%;
     object-fit: cover;
 `
+

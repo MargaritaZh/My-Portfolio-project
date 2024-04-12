@@ -1,13 +1,13 @@
-import React, {DetailedHTMLProps, InputHTMLAttributes, ReactNode} from 'react';
 import styled from "styled-components";
 import {Button} from "../../../../../components/button/Button";
+import {Input} from "./input/Input";
+import {theme} from "../../../../../styles/Theme";
 
 export const Info = () => {
     return (
         <StyledInfo>
             <Title>Leave us your info</Title>
             <StyledForm>
-                <StyledFormItem>
                     <Input
                         id='userName'
                         type="text"
@@ -18,8 +18,6 @@ export const Info = () => {
                         }
                         as='input'
                     />
-                </StyledFormItem>
-                <StyledFormItem>
                     <Input
                         id='userEmail'
                         type="email"
@@ -30,8 +28,6 @@ export const Info = () => {
                         }
                         as='input'
                     />
-                </StyledFormItem>
-                <StyledFormItem>
                     <Input
                         id='userSubject'
                         type="text"
@@ -42,8 +38,6 @@ export const Info = () => {
                         }
                         as='input'
                     />
-                </StyledFormItem>
-                <StyledFormItem>
                     <Input
                         id='userMessage'
                         name="user-message"
@@ -53,7 +47,6 @@ export const Info = () => {
                         }
                         as='textarea'
                     />
-                </StyledFormItem>
                 <Button text={"send message"}/>
             </StyledForm>
         </StyledInfo>
@@ -61,54 +54,36 @@ export const Info = () => {
 };
 
 
-type DefaultInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement>, HTMLInputElement | HTMLTextAreaElement>
-
-interface IProps extends DefaultInputProps {
-    label: ReactNode
-    as: 'textarea' | 'input'
-}
-
-const Input = ({label, as, ref, ...rest}: IProps) => {
-
-    return (
-        <label>
-            {label}
-            {as === 'textarea'
-                ?
-                <textarea {...rest}>
-
-            </textarea>
-                :
-                <input {...rest}></input>
-            }
-        </label>
-    )
-}
-
 const StyledInfo = styled.div`
-    min-width: 570px;
-    background-color: aqua;
-    min-height: 70vh;
-
+    max-width: 570px;
+    width: 100%;
+    background-color: ${theme.colors.primaryBg};
+    outline: solid 1px blueviolet;
 `
 
-const Title = styled.h2``
+const Title = styled.h2`
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+`
 
 
 const StyledForm = styled.form`
 
-    border: solid 1px red;
-    max-width: 570px;
+    outline: solid 1px red;
+    background-color: ${theme.colors.secondaryBg};
     width: 100%;
+    padding: 25px;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
+
 `
 
-const StyledFormItem = styled.div``
-
-const StyledLabel = styled.label``
+const StyledLabel = styled.label`
+    outline: solid 1px greenyellow;
+`
 
 
 
