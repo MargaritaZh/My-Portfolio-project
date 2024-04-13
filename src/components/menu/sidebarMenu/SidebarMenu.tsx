@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../icon/Icon";
+import {theme} from "../../../styles/Theme";
 
 type SidebarMenuPropsType = {
     menuIconsId: Array<string>
@@ -13,11 +14,13 @@ export const SidebarMenu = (props: SidebarMenuPropsType) => {
     return (
         <StyledSidebarMenu>
             {props.menuIconsId.map((item, index) => {
-                return <ListItem key={index}>
-                    <Link href="">
-                        <Icon iconId={item} width={props.width} height={props.height} viewBox={props.viewBox}/>
-                    </Link>
-                </ListItem>
+                return (
+                    <ListItem key={index}>
+                        <Link href="">
+                            <Icon iconId={item} width={props.width} height={props.height} viewBox={props.viewBox}/>
+                        </Link>
+                    </ListItem>
+                )
             })}
         </StyledSidebarMenu>
     );
@@ -26,13 +29,29 @@ export const SidebarMenu = (props: SidebarMenuPropsType) => {
 export const StyledSidebarMenu = styled.ul`
     display: flex;
     flex-direction: column;
-    gap: 65px;
-    margin-top: 100px;
+    gap: 43px;
+    margin-top: 215px;
 
-    border: 1px solid #265e26;
+    outline: 1px solid rebeccapurple;
 `
 
-const ListItem = styled.li``
+const ListItem = styled.li`
 
-const Link = styled.a``
+
+`
+
+const Link = styled.a`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: ${theme.colors.primaryBg};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: ${theme.colors.accent};
+    }
+    
+`
 

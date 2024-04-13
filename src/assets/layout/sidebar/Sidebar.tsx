@@ -5,6 +5,7 @@ import {SkillsAdnLanguagesCard} from "./skillsAdnLanguagesCard/SkillsAdnLanguage
 import {ExtraSkillsCard} from "./extraSkillsCard/ExtraSkillsCard";
 import {MainCard} from "./mainCard/MainCard";
 import {DescriptionCard} from "./descriptionCard/DescriptionCard";
+import {theme} from "../../../styles/Theme";
 
 
 const descriptionItems = [
@@ -45,26 +46,21 @@ export const Sidebar = () => {
 };
 
 const StyledSidebar = styled.aside`
-    background-color: #9f8dc5;
+    background-color: ${theme.colors.secondaryBg};
     display: flex;
     flex-direction: column;
-
-    max-width: 305px;
-    width: 100%;
-    
-
-    outline: solid 1px green;
+    width: 305px;
+    padding: 50px 50px 25px 35px;
+    outline: 1px solid #a443a4;
 
     height: 100vh;
     overflow: auto;
-
 
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     z-index: 999;
-
 `
 
 
