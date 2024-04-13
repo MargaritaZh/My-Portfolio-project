@@ -11,11 +11,8 @@ type ButtonPropsType = {
     width?: string
     viewBox?: string
 
-    // variant?: string
-
-    btnType?: "mainBtn" | "priceBtn"| "infoBtn"
+    btnType?: "mainBtn" | "priceBtn"| "infoBtn" |"downloadBtn"
     active?: boolean
-
 }
 
 export const Button = ({text, iconId, height, width, viewBox,btnType,active,}: ButtonPropsType) => {
@@ -29,22 +26,15 @@ export const Button = ({text, iconId, height, width, viewBox,btnType,active,}: B
     );
 };
 
-
-
-const TextButton = styled.span`
-    
-    
-    
-`
+const TextButton = styled.span``
 
 type StyledBtnPropsType = {
     color?: string
     fontSize?: string
-    btnType?: "mainBtn" | "priceBtn" | "infoBtn"
+    btnType?: "mainBtn" | "priceBtn" | "infoBtn" |"downloadBtn"
     active?:boolean
 
 }
-
 
 export const StyledButton = styled.button<StyledBtnPropsType>`
 
@@ -52,11 +42,10 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
     display: flex;
     align-items: center;
     gap: 11px;
-
-
+    
     //mainBtn
     ${props => props.btnType === "mainBtn" && css<StyledBtnPropsType>`
-
+        justify-content: space-between;
         padding: 16px 32px;
         border: 2px solid ${theme.colors.accent};
         border-radius: 5px;
@@ -119,6 +108,26 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
         
         &:hover {
             color: ${theme.colors.secondaryBg};
+        }
+    `}
+
+    //downloadBtn
+    ${props => props.btnType === "downloadBtn" && css<StyledBtnPropsType>`
+        justify-content: space-between;
+        padding: 10px 40px;
+        width: 220px;
+        background-color: ${theme.colors.accent};
+        margin-top: 25px;
+        
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+         color: ${theme.colors.font};
+        
+
+        &:hover {
+                color: ${theme.colors.secondaryBg};
         }
     `}
     

@@ -10,7 +10,9 @@ const menuIconsId = ["facebook", "instagram", "twitter", "linkedin", "yourtube",
 export const MainCard = () => {
     return (
         <StyledMainCard>
-            <Image src={smallMainPhoto} alt="main photo"/>
+            <ImageWrapper>
+                <Image src={smallMainPhoto} alt="main photo"/>
+            </ImageWrapper>
             <Name>Rayan Adlardard</Name>
             <Profession>Font-end Developer</Profession>
             <SidebarMenu menuIconsId={menuIconsId} width={"14"} height={"14"} viewBox={"0 0 14 14"}/>
@@ -24,12 +26,9 @@ const  StyledMainCard=styled.div`
     justify-content: center;
     align-items: center;
     padding-bottom: 24px;
-    
-    
     min-width: 220px;
     
     border-bottom: 2px solid ${theme.colors.primaryBg};
-
 
     ${StyledSidebarMenu} {
         display: flex;
@@ -39,8 +38,7 @@ const  StyledMainCard=styled.div`
         gap: 15px;
         width: 100%;
         margin-top: 15px;
-
-
+        
         a {
             width: 24px;
             height: 24px;
@@ -51,15 +49,36 @@ const  StyledMainCard=styled.div`
             align-items: center;
         }
     }
+`
 
+const ImageWrapper=styled.div`
+    margin-bottom: 30px;
+    height: 150px;
+    width: 150px;
+    
+    position: relative;
+    z-index: 0;
+    
+   &::before{
+       content: "";
+       display: inline-block;
+       width: 16px;
+       height: 16px;
+       border-radius: 50%;
+       background-color: rgb(126, 185, 66);
+       
+       position: absolute;
+       bottom: 18px;
+       right: 10px;
+       z-index: 1;
+   }
 `
 
 const Image = styled.img`
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 30px;
 `
 
 const Name = styled.h3`

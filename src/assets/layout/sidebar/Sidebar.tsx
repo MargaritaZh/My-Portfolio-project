@@ -40,7 +40,7 @@ export const Sidebar = () => {
             <SkillsAdnLanguagesCard title={"Languages"} items={languagesItems}/>
             <SkillsAdnLanguagesCard title={"Skills"} items={skillsItems}/>
             <ExtraSkillsCard title={"Extra Skills"} items={extraSkillsItems}/>
-            <Button text={"Download cv"} iconId={"btnDownload"} width={"14"} height={"16"} viewBox={"0 0 14 16"}/>
+            <Button text={"Download cv"} btnType={"downloadBtn"} iconId={"btnDownload"} width={"14"} height={"16"} viewBox={"0 0 14 16"}/>
         </StyledSidebar>
     );
 };
