@@ -31,7 +31,6 @@ export const StyledSidebarMenu = styled.ul`
     flex-direction: column;
     gap: 43px;
     margin-top: 215px;
-
     outline: 1px solid rebeccapurple;
 `
 

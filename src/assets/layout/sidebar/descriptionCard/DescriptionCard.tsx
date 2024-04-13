@@ -1,23 +1,3 @@
-// type DescriptionCardPropsType = {
-//     items: Array<{ name: string; description: string }>
-// }
-//
-// export const DescriptionCard = (props: DescriptionCardPropsType) => {
-//     return (
-//         <StyledDescriptionCard>
-//
-//             {props.items.map((item, index) => {
-//                 return (
-//                     <Wrapper key={index}>
-//                         <LeftText>{item.name}</LeftText>
-//                         <RightText>{item.description}</RightText>
-//                     </Wrapper>
-//                 )
-//             })}
-//
-//         </StyledDescriptionCard>
-//     );
-// };
 import React from 'react';
 import styled from 'styled-components';
 import {theme} from '../../../../styles/Theme';
@@ -51,6 +31,7 @@ const StyledDescriptionCard = styled.div`
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
+    min-width: 220px;
 
     & + div {
         margin-top: 10px;
@@ -62,10 +43,7 @@ const LeftText = styled.span`
     line-height: 1.6;
     background-color: ${theme.colors.accent};
     padding: 0 6px 0 5px;
-    
-    
 `
-
 
 type RightTextProps = {
     isThirdElement: boolean;

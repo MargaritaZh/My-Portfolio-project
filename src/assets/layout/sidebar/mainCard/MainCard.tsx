@@ -24,8 +24,11 @@ const  StyledMainCard=styled.div`
     justify-content: center;
     align-items: center;
     padding-bottom: 24px;
-    border-bottom: 2px solid ${theme.colors.primaryBg};
     
+    
+    min-width: 220px;
+    
+    border-bottom: 2px solid ${theme.colors.primaryBg};
 
 
     ${StyledSidebarMenu} {
@@ -36,6 +39,7 @@ const  StyledMainCard=styled.div`
         gap: 15px;
         width: 100%;
         margin-top: 15px;
+
 
         a {
             width: 24px;
