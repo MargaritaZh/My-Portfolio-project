@@ -9,10 +9,10 @@ import {theme} from "../../../styles/Theme";
 
 
 const descriptionItems = [
-    {name: "Age", description: "24"},
-    {name: "Residence", description: "BD"},
-    {name: "Freelance", description: "Available"},
-    {name: "Address", description: "Dhaka,Bangladesh"},
+    {name: "Age:", description: "24"},
+    {name: "Residence:", description: "BD"},
+    {name: "Freelance:", description: "Available"},
+    {name: "Address:", description: "Dhaka,Bangladesh"},
 ]
 
 
