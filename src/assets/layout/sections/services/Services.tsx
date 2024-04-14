@@ -65,12 +65,12 @@ export const Services = () => {
 
 
 const ServicesWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: space-between;
-    min-height: 470px;
     outline: 3px solid blue;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(310px, 1fr));
+    grid-auto-rows: 225px;
+    gap: 20px;
 `
 
 

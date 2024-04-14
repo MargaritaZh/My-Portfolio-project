@@ -47,11 +47,11 @@ export const Portfolio = () => {
 };
 
 const WrapperPortfolioWorks = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: space-between;
     outline: 3px solid blue;
-    min-height: 960px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 20px;
 `
 

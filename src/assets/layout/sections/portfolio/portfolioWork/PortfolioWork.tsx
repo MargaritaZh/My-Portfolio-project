@@ -13,9 +13,6 @@ export const PortfolioWork = (props: { src: string }) => {
 
 const StyledPortfolioWork = styled.div`
     outline: solid 1px red;
-    min-height: 300px;
-    max-width: 310px;
-    width: 100%;
 
     position: relative;
 

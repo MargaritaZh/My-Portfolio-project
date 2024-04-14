@@ -30,9 +30,8 @@ export const Service = ({ iconId, height, width, viewBox, title, text, isLink = 
 };
 
 const StyledService = styled.div`
-    max-width: 310px;
-    width: 100%;
-    min-height: 225px;
+    
+    
     background-color: ${theme.colors.secondaryBg};
     
     padding: 25px;
