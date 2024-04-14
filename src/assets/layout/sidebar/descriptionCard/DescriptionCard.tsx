@@ -53,7 +53,7 @@ const RightText = styled.span<RightTextProps>`
     font-size: 15px;
     font-weight: 400;
     line-height: 1.6;
-    color: ${(props) => (props.isThirdElement ? 'rgb(126, 185, 66)' : 'inherit')};
+     color: ${(props) => (props.isThirdElement ? 'rgb(126, 185, 66)' : 'inherit')};
 }`
 
 

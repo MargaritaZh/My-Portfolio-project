@@ -22,11 +22,15 @@ function App() {
             <MainContent>
                     {/*<Header/>*/}
                     <Main/>
+                    {/*<Services/>*/}
+
                     <Services/>
                     <Price/>
                     <Recommendations/>
                     <Education/>
                     <WorkHistory/>
+                    {/*<Portfolio/>*/}
+
                     <Portfolio/>
                     <Blog/>
                     <Footer/>

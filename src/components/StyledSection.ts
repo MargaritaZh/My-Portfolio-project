@@ -9,18 +9,19 @@ export const StyledSection = styled.section`
     outline: solid 1px green;
     background-color: ${theme.colors.primaryBg};
     margin-bottom: 70px;
-   
-
-    &:first-child,
-    &:nth-child(5),
-    &:nth-child(6){
+    
+    &:first-child {
         background-color: ${theme.colors.secondaryBg};
         margin-bottom: 135px;
     }
-    
-    
 
-    @media screen and (min-width: 1440px) {
+    &:nth-child(5),
+    &:nth-child(6){
+        background-color: ${theme.colors.secondaryBg};
+    }
+
+    
+        @media screen and (min-width: 1440px) {
         max-width: 100%;
         width: 100%;
     }

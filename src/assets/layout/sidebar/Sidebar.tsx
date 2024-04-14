@@ -50,11 +50,16 @@ const StyledSidebar = styled.aside`
     display: flex;
     flex-direction: column;
     width: 305px;
+    
+    
+    
     padding: 50px 50px 25px 35px;
     outline: 1px solid #a443a4;
 
     height: 100vh;
     overflow: auto;
+    
+    
 
     position: fixed;
     top: 0;

@@ -12,6 +12,25 @@ export const GlobalStyle=createGlobalStyle`
     }
 
 
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: ${theme.colors.primaryBg} ${theme.colors.fontDescription};
+    }
+    
+    *::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background-color: ${theme.colors.fontDescription};
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: ${theme.colors.primaryBg};
+        border: 2px solid ${theme.colors.fontDescription};
+        border-radius: 5px;
+    }
+
     body {
         margin: 0;
         font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,7 +38,7 @@ export const GlobalStyle=createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        
+
         letter-spacing: 0%;
         line-height: 1.2;
         text-transform: capitalize;

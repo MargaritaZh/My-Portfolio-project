@@ -47,6 +47,11 @@ const  StyledMainCard=styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
+            
+            &:hover{
+              background-color: ${theme.colors.accentSideBar};
+            }
+            
         }
     }
 `
@@ -65,7 +70,7 @@ const ImageWrapper=styled.div`
        width: 16px;
        height: 16px;
        border-radius: 50%;
-       background-color: rgb(126, 185, 66);
+       background-color: ${theme.colors.accentSideBar};
        
        position: absolute;
        bottom: 18px;
