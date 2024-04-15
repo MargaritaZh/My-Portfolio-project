@@ -32,6 +32,10 @@ const skillsItems = [
 
 const extraSkillsItems = ["Bootstrap, Materialize", "Stylus, Sass, Less", "Gulp, Webpack, Grunt", "GIT Knowledge"]
 
+
+
+
+
 export const Sidebar = () => {
     return (
         <StyledSidebar>
@@ -45,29 +49,27 @@ export const Sidebar = () => {
     );
 };
 
-const StyledSidebar = styled.aside`
+ const StyledSidebar = styled.aside`
     background-color: ${theme.colors.secondaryBg};
     display: flex;
     flex-direction: column;
     width: 305px;
+     
     padding: 50px 35px 25px 35px;
-    
+
     outline: 1px solid #a443a4;
 
     height: 100vh;
     overflow: auto;
-    
+
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     z-index: 999;
-    
-    
-    
-    @media ${theme.media.tablet} {
-        display: none;
-    }
+
+     
+}
 `
 
 

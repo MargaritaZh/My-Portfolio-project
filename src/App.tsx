@@ -1,5 +1,4 @@
 import './App.css';
-import {Header} from "./assets/layout/header/Header";
 import {Main} from "./assets/layout/sections/main/Main";
 import {Services} from "./assets/layout/sections/services/Services";
 import {Portfolio} from "./assets/layout/sections/portfolio/Portfolio";
@@ -16,8 +15,11 @@ import {theme} from "./styles/Theme";
 
 
 
+
 function App() {
-    return (
+
+
+        return (
         <div className="App">
             <Sidebar/>
             <MainContent>
@@ -44,11 +46,11 @@ export default App;
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
     outline: solid 3px #ffae00;
-        
-        @media ${theme.media.tablet} {
-                padding: 0 133px 0 15px;      
-        }
+    
+    // @media ${theme.media.tablet} {
+    //     padding: 0 133px 0 15px;
+    // }
+       
 `
-
 
 

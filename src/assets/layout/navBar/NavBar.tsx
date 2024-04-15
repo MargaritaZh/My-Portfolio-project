@@ -1,6 +1,6 @@
 import React from 'react';
 import {Logo} from "../../../components/logo/Logo";
-import {SidebarMenu} from "../../../components/menu/sidebarMenu/SidebarMenu";
+import {SidebarMenu, StyledSidebarMenu} from "../../../components/menu/sidebarMenu/SidebarMenu";
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {FlexWrapper} from "../../../components/FlexWrapper";
@@ -24,7 +24,7 @@ const StyledNavBar = styled.aside`
     max-height: 100vh;
     width: 108px;
     padding: 52px 0;
-    
+
     position: fixed;
     top: 0;
     right: 0;
@@ -32,4 +32,29 @@ const StyledNavBar = styled.aside`
     z-index: 99999;
 
     outline: solid 1px orangered;
+
+    @media (max-width: 768px) {
+        ${FlexWrapper} {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        ${StyledSidebarMenu} {
+            
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 0;
+            outline: 1px solid rebeccapurple;
+        }
+
+        top: auto; /* Отменяем фиксацию сверху */
+        //bottom: 0; /* Зафиксируем панель внизу экрана */
+        left: 0; /* Зафиксируем панель по левому краю */
+        //right: 0; /* Зафиксируем панель по правому краю */
+        width: 100%; /* Растягиваем панель на всю ширину экрана */
+        height: 100px; /* Задаем высоту панели */
+        padding: 0; /* Убираем отступы */
+    }
 `
