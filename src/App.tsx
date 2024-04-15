@@ -12,6 +12,7 @@ import {Price} from "./assets/layout/sections/price/Price";
 import {Sidebar} from "./assets/layout/sidebar/Sidebar";
 import {NavBar} from "./assets/layout/navBar/NavBar";
 import styled from "styled-components";
+import {theme} from "./styles/Theme";
 
 
 
@@ -43,6 +44,10 @@ export default App;
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
     outline: solid 3px #ffae00;
+        
+        @media ${theme.media.tablet} {
+                padding: 0 133px 0 15px;      
+        }
 `
 
 

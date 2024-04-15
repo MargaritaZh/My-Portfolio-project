@@ -7,7 +7,10 @@ export const theme = {
 
         font:"rgb(43, 43, 43)",
         fontDescription:" rgb(118, 118, 118)",
+    },
 
-
+    media:{
+        tablet: "screen and (max-width:768px)",
+        mobile: "screen and (max-width:576px)"
     }
 }
