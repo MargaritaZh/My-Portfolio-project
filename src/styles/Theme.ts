@@ -10,6 +10,8 @@ export const theme = {
     },
 
     media:{
+        navMenu:"screen and (max-width: 1092px)",
+        sideBar:"screen and (max-width: 800px)",
         tablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)",
     }

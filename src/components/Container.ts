@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import {theme} from "../styles/Theme";
 
 export const Container = styled.div`
     max-width: 970px;
-    //max-width: 1000px;
-    //padding: 0 15px;
     
     
     width: 100%;
@@ -11,4 +10,5 @@ export const Container = styled.div`
     margin: 0 auto;
 
     outline: 1px solid red;
+    
 `

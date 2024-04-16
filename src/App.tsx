@@ -46,8 +46,12 @@ export default App;
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
     outline: solid 3px #ffae00;
+    
+    @media ${theme.media.navMenu} {
+        padding: 0 15px 0 330px; 
+    }
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.sideBar} {
         padding: 0 15px 0 15px;
     }
        

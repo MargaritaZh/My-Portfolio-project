@@ -68,7 +68,7 @@ export const Sidebar = () => {
     bottom: 0;
     z-index: 999;
 
-     @media ${theme.media.tablet} {
+     @media ${theme.media.sideBar} {
          display: none;
      }
 }

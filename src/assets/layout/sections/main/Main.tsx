@@ -32,15 +32,25 @@ export const Main = () => {
 const Wrapper=styled.div`
     display: flex;
     justify-content: space-between;
-    gap:25px;
+    gap: 25px;
     align-items: center;
     flex-wrap: wrap;
 
     padding: 0 55px 0 60px;
+    
+
+    @media ${theme.media.tablet} {
+        padding: 0 10px 0 10px;
+        gap: 0;
+    }
 `
 
 const TextBlock = styled.div`
     padding: 93px 0 74px;
+    
+    @media ${theme.media.tablet} {
+        padding: 99px 22px 50px;
+    }
 `
 
 const MainTitle = styled.h1`
@@ -68,15 +78,21 @@ const Text = styled.p`
     width: 100%;
     
     margin: 18px 0 25px 0;
+    
+    @media ${theme.media.mobile} {
+        margin: 89px 0 34px 0;
+    }
 `
 
 
 const Photo = styled.img`
-    //padding-right: 55px;
     width: 325px;
     height: 460px;
     object-fit: cover;
-    
+   
+    @media ${theme.media.tablet} {
+        margin: 0 auto;
+    }
 `
 
 

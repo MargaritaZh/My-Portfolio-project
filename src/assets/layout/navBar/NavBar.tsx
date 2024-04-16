@@ -33,7 +33,7 @@ const StyledNavBar = styled.aside`
 
     outline: solid 1px orangered;
 
-    @media (max-width: 768px) {
+    @media ${theme.media.navMenu} {
         ${FlexWrapper} {
             flex-direction: row;
             justify-content: center;
