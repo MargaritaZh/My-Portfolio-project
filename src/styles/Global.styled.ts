@@ -46,6 +46,11 @@ export const GlobalStyle=createGlobalStyle`
         color: ${theme.colors.font};
     }
 
+    h1 {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
     h3 {
         font-size: 18px;
         font-weight: 500;
@@ -57,7 +62,7 @@ export const GlobalStyle=createGlobalStyle`
         line-height: 1.6;
         color: ${theme.colors.fontDescription};
     }
-    
+
     span {
         font-size: 15px;
         font-weight: 400;

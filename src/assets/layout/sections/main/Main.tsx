@@ -14,7 +14,7 @@ export const Main = () => {
             <Container>
                 <Wrapper>
                     <TextBlock>
-                        <MainTitle>I’m Rayan Adlrdard <span>Front-end</span> Developer</MainTitle>
+                        <MainTitle>I’m Rayan Adlrdard <WrapText>Front-end</WrapText> Developer</MainTitle>
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat
                             lobortis.
                             Natoque rutrum semper sed suspendisse nunc lectus.
@@ -35,10 +35,8 @@ const Wrapper=styled.div`
     gap: 25px;
     align-items: center;
     flex-wrap: wrap;
-
     padding: 0 55px 0 60px;
     
-
     @media ${theme.media.tablet} {
         padding: 0 10px 0 10px;
         gap: 0;
@@ -54,26 +52,21 @@ const TextBlock = styled.div`
 `
 
 const MainTitle = styled.h1`
-
-    span {
-        color: ${theme.colors.accent};
-    }
-
-    font-size: 48px;
-    font-weight: 700;
     text-align: left;
-
     max-width: 500px;
     width: 100%;
 `
 
+const WrapText=styled.span`
+    color: ${theme.colors.accent};
+    font-size: 48px;
+    font-weight: 700;
+`
+
 const Text = styled.p`
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
     text-align: left;
     color:${theme.colors.fontDescription};
-    
     max-width: 425px;
     width: 100%;
     
@@ -83,7 +76,6 @@ const Text = styled.p`
         margin: 89px 0 34px 0;
     }
 `
-
 
 const Photo = styled.img`
     width: 325px;
