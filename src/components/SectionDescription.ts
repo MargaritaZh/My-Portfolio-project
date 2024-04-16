@@ -11,5 +11,5 @@ export const SectionDescription = styled.p`
     max-width: 440px;
     width: 100%;
     
-    margin-bottom: 50px;
+    margin:25px 0 50px;
 `

@@ -7,6 +7,7 @@ import {SectionTitle} from "../../../../components/SectionTitle";
 import styled from "styled-components";
 import {Container} from "../../../../components/Container";
 import {SectionText} from "../../../../components/SectionText";
+import {theme} from "../../../../styles/Theme";
 
 
 export const Services = () => {
@@ -71,6 +72,10 @@ const ServicesWrapper = styled.div`
     grid-template-columns: repeat(auto-fill,minmax(310px, 1fr));
     grid-auto-rows: 225px;
     gap: 20px;
+    
+    @media ${theme.media.tablet} {
+        padding: 0 18px 0;
+    }
 `
 
 

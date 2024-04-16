@@ -13,6 +13,10 @@ export const StyledSection = styled.section`
     &:first-child {
         background-color: ${theme.colors.secondaryBg};
         margin-bottom: 135px;
+        
+        @media ${theme.media.tablet} {
+            margin-bottom: 86px;
+        }
     }
 
     &:nth-child(5),

@@ -67,6 +67,11 @@ export const Sidebar = () => {
     left: 0;
     bottom: 0;
     z-index: 999;
+     
+     @media ${theme.media.navMenu} {
+         padding: 50px 35px 100px 35px;
+
+     }
 
      @media ${theme.media.sideBar} {
          display: none;

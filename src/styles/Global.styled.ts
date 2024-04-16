@@ -16,7 +16,7 @@ export const GlobalStyle=createGlobalStyle`
         scrollbar-width: thin;
         scrollbar-color: ${theme.colors.primaryBg} ${theme.colors.fontDescription};
     }
-    
+
     *::-webkit-scrollbar {
         width: 10px;
     }
@@ -46,6 +46,18 @@ export const GlobalStyle=createGlobalStyle`
         color: ${theme.colors.font};
     }
 
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: ${theme.colors.fontDescription};
+    }
+
     a {
         text-decoration: none;
         cursor: pointer;
@@ -60,5 +72,6 @@ export const GlobalStyle=createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+
 
 `
