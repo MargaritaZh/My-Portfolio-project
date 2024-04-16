@@ -25,14 +25,14 @@ function App() {
             <MainContent>
                     {/*<Header/>*/}
                     <Main/>
-                    <Services/>
-                    <Price/>
-                    <Recommendations/>
-                    <Education/>
-                    <WorkHistory/>
-                    <Portfolio/>
-                    <Blog/>
-                    <Footer/>
+                    {/*<Services/>*/}
+                    {/*<Price/>*/}
+                    {/*<Recommendations/>*/}
+                    {/*<Education/>*/}
+                    {/*<WorkHistory/>*/}
+                    {/*<Portfolio/>*/}
+                    {/*<Blog/>*/}
+                    {/*<Footer/>*/}
             </MainContent>
             <NavBar/>
         </div>
