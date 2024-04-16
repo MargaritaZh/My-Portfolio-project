@@ -75,7 +75,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
 
 const StyledPriceCard = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    width: 310px;
+    min-width: 310px;
     padding: 54px 32px 25px;
     display: flex;
     flex-direction: column;
@@ -83,14 +83,9 @@ const StyledPriceCard = styled.div`
     
     position: relative;
     z-index: 0;
-    
-
 `
 
-const PopularText=styled.span`color: rgb(43, 43, 43);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
+const PopularText=styled.span`
     background-color: ${theme.colors.accent};
     text-align: center;
     padding: 3px 0;
@@ -100,7 +95,6 @@ const PopularText=styled.span`color: rgb(43, 43, 43);
     left: 0;
     right: 0;
     z-index: -1;
-    
 `
 const CardTitle=styled.h3`
     color: ${theme.colors.font};
@@ -108,17 +102,9 @@ const CardTitle=styled.h3`
     font-weight: 600;
     margin-bottom: 19px;
 `
-const CostOfWork=styled.h2`
-    font-size: 32px;
-    font-weight: 700;
-`
-const Time=styled.span`
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
-`
+const CostOfWork=styled.h2``
 
-
+const Time=styled.span``
 
 const Wrapper=styled.div`
 display: flex;
@@ -127,21 +113,14 @@ display: flex;
     gap:10px;
     margin-bottom: 8px;
 `
-
 const TextDescription=styled.p`
-    color: ${theme.colors.fontDescription};
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
     text-align: center;
     margin-bottom: 21px;
 `
-
 const ListItem=styled.ul`
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     margin-bottom: 21px;
 `
 const Item=styled.li`
@@ -149,8 +128,5 @@ const Item=styled.li`
     align-items: center;
     gap: 15px;
 `
-const ItemText=styled.span`
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
-`
+const ItemText=styled.span``
+

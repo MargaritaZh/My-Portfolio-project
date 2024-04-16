@@ -57,6 +57,12 @@ export const GlobalStyle=createGlobalStyle`
         line-height: 1.6;
         color: ${theme.colors.fontDescription};
     }
+    
+    span {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
 
     a {
         text-decoration: none;
