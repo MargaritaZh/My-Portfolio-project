@@ -46,6 +46,7 @@ const StyledNavBar = styled.aside`
             flex-direction: row;
             gap: 10px;
             margin-top: 0;
+            
             outline: 1px solid rebeccapurple;
         }
 
@@ -54,7 +55,7 @@ const StyledNavBar = styled.aside`
         left: 0; /* Зафиксируем панель по левому краю */
         //right: 0; /* Зафиксируем панель по правому краю */
         width: 100%; /* Растягиваем панель на всю ширину экрана */
-        height: 100px; /* Задаем высоту панели */
+        height: 80px; /* Задаем высоту панели */
         padding: 0; /* Убираем отступы */
     }
 `

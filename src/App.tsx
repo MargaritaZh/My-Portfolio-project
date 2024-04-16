@@ -46,10 +46,10 @@ export default App;
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
     outline: solid 3px #ffae00;
-    
-    // @media ${theme.media.tablet} {
-    //     padding: 0 133px 0 15px;
-    // }
+
+    @media ${theme.media.tablet} {
+        padding: 0 15px 0 15px;
+    }
        
 `
 
