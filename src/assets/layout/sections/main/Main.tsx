@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import mainPhoto from "../../../images/main-photo.png"
-import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Button} from "../../../../components/button/Button";
 import {StyledSection} from "../../../../components/StyledSection";
 import {theme} from "../../../../styles/Theme";

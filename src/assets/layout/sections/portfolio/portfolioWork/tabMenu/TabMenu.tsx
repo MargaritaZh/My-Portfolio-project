@@ -23,20 +23,23 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
     );
 };
 
-const StyledTabMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
+const StyledTabMenu = styled.nav``
+
+const ListItem=styled.ul`
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @media ${theme.media.navMenu} {
+        justify-content: flex-start;
+        max-width: 630px;
+        overflow: hidden;
+        white-space: nowrap;
     }
 `
-const ListItem=styled.ul`
-    margin-bottom: 50px;
-`
 
-const Item = styled.li`
-
-`
+const Item = styled.li``
 
 const Link = styled.a`
     font-size: 18px;
@@ -45,5 +48,5 @@ const Link = styled.a`
     
     &:hover {
         color: ${theme.colors.accent};
-        
+    }
 `

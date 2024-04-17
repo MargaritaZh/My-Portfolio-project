@@ -16,6 +16,7 @@ import {StyledSection} from "../../../../components/StyledSection";
 import {SectionTitle} from "../../../../components/SectionTitle";
 import {TabMenu} from "./portfolioWork/tabMenu/TabMenu";
 import {Container} from "../../../../components/Container";
+import {theme} from "../../../../styles/Theme";
 
 
 const worksItems = ["All categories", "UI Design", "Web Templates", "Logo", "Branding"]
@@ -53,5 +54,9 @@ const WrapperPortfolioWorks = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     grid-auto-rows: 300px;
     gap: 20px;
+    
+    @media ${theme.media.tablet} {
+        padding: 0 18px;
+    }
 `
 

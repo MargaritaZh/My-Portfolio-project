@@ -30,7 +30,7 @@ function App() {
                     {/*<Recommendations/>*/}
                     {/*<Education/>*/}
                     {/*<WorkHistory/>*/}
-                    {/*<Portfolio/>*/}
+                    <Portfolio/>
                     {/*<Blog/>*/}
                     {/*<Footer/>*/}
             </MainContent>
