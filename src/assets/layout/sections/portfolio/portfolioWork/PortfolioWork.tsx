@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components"
 import {Button, StyledButton} from "../../../../../components/button/Button";
+import {theme} from "../../../../../styles/Theme";
 
 export const PortfolioWork = (props: { src: string }) => {
     return (
@@ -16,22 +17,6 @@ const StyledPortfolioWork = styled.div`
 
     position: relative;
 
-    &:hover {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 180, 0, 0.95);
-        }
-
-        ${StyledButton} {
-            opacity: 1;
-        }
-    }
-
     ${StyledButton} {
         opacity: 0;
         position: absolute;
@@ -39,8 +24,39 @@ const StyledPortfolioWork = styled.div`
         top: 50%;
         transform: translate(-50%, -50%);
     }
-`
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 180, 0, 0.95);
+        opacity: 0;
+    }
+
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        ${StyledButton} {
+            opacity: 1;
+        }
+    }
+    
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;
+        }
+
+        ${StyledButton} {
+            opacity: 1;
+        }
+    }
+`
 
 const Image = styled.img`
     height: 100%;
