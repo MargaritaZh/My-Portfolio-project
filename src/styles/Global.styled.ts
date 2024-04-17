@@ -50,6 +50,10 @@ export const GlobalStyle=createGlobalStyle`
         font-size: 48px;
         font-weight: 700;
     }
+    h2{
+        font-size: 32px;
+        font-weight: 700;
+    }
 
     h3 {
         font-size: 18px;

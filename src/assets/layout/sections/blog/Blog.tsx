@@ -16,6 +16,7 @@ import logoImage4 from "../../../images/blog-images/logo-image-4.png"
 import {StyledSection} from "../../../../components/StyledSection";
 import {SectionTitle} from "../../../../components/SectionTitle";
 import {Container} from "../../../../components/Container";
+import {theme} from "../../../../styles/Theme";
 
 export const Blog = () => {
     return (
@@ -77,7 +78,12 @@ const InfoWrapper = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin: 70px 0 70px;
-
+    
+    
+    flex-wrap: wrap-reverse;
+    @media ${theme.media.tablet} {
+        margin: 65px 0 70px;
+    }
 `
 
 const StyledMap = styled.iframe``

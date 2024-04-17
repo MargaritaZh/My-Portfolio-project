@@ -45,15 +45,16 @@ const StyledContactInfo = styled.div`
     width: 100%;
 
     outline: 1px solid greenyellow;
-    
 `
 
 
 const Title = styled.h2`
-    font-size: 32px;
-    font-weight: 700;
     text-transform: capitalize;
     margin-bottom: 50px;
+    
+    @media ${theme.media.tablet} {
+        text-align: center;
+    }
 `
 
 

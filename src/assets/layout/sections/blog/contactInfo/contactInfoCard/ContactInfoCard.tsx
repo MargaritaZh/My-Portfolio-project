@@ -33,7 +33,7 @@ export const ContactInfoCard = (props: ContactInfoCardPropsType) => {
 
 const StyledContactInfoCard = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    max-height: 210px;
+    min-height: 210px;
     width: 100%;
     padding: 25px 25px 16px;
 
@@ -42,6 +42,10 @@ const StyledContactInfoCard = styled.div`
 
     & + div {
         margin-top: 18px;
+    }
+    
+    @media ${theme.media.tablet} {
+        max-width: 344px;
     }
 `
 

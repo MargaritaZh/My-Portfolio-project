@@ -22,7 +22,6 @@ export const BlogCart = (props: BlogCartPropsType) => {
     );
 };
 
-
 const StyledBlogCart = styled.div`
     background-color: ${theme.colors.secondaryBg};
     min-height: 474px;
@@ -42,19 +41,11 @@ const BlogCartImage = styled.img`
 
 const Description=styled.div`
     padding: 25px 17px 16px 25px;
-    
 `
 const Title=styled.h3`
-    font-size: 18px;
-    font-weight: 500;
     margin-bottom: 8px;
 `
 
 const Text=styled.p`
-    color: ${theme.colors.fontDescription}
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
     margin-bottom: 9px;
-
 `
