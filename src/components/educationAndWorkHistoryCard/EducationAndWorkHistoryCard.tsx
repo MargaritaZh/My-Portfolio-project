@@ -32,10 +32,11 @@ export const EducationAndWorkHistoryCard = (props: EducationAndWorkHistoryCardPr
 
 const StyledEducationAndWorkHistoryCard = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    width: 904px;
-    min-height: 105px;
-    //outline: 1px solid red;
+    width: 100%;
+    
+    outline: 1px solid red;
     display: flex;
+   
 
     &:first-child {
         border-bottom: 2px solid rgb(240, 240, 246);
@@ -47,23 +48,25 @@ const StyledEducationAndWorkHistoryCard = styled.div`
         border-bottom: 2px solid rgb(240, 240, 246);
         padding-bottom: 28px;
     }
+
+    @media ${theme.media.navMenu} {
+        flex-wrap: wrap;
+    }
 `
 
 const LeftSideCard = styled.div`
     min-width: 368px;
-    width: 100%;
 `
 
 const Title = styled.h3`
     margin: 4px 0 25px;
-    font-size: 18px;
-    font-weight: 500;
+    
+    @media ${theme.media.navMenu} {
+        margin: 0 0 12px;
+    }
 `
 
 const Status = styled.span`
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
     margin-right: 21px;
 `
 
@@ -77,26 +80,17 @@ const PeriodOfStudy = styled.span`
     line-height: 1;
     border-radius: 1px;
     background-color: ${theme.colors.accent};
-    
 `
 
-
-const RightSideCard = styled.div`
-
-`
-
+const RightSideCard = styled.div``
 
 const RightSideTitle=styled.h3`
-    font-size: 18px;
-    font-weight: 500;
     margin-bottom: 28px;
+    
+    @media ${theme.media.navMenu} {
+        margin: 27px 0 10px 0;
+    }
 `
 
-const Text = styled.p`
-    color: ${theme.colors.fontDescription};
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
-
-`
+const Text = styled.p``
 
