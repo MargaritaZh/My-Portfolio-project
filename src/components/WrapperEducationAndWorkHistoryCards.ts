@@ -8,9 +8,10 @@ export const WrapperEducationAndWorkHistoryCards = styled.div`
     background-color: ${theme.colors.secondaryBg};
     gap: 28px;
     width: 100%;
-    padding: 47px 29px 38px 37px;
-    
+    padding: 42px 29px 42px 37px;
+
     @media ${theme.media.navMenu} {
+        gap: 30px;
         padding: 30px 32px;
     }
 `

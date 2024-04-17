@@ -56,6 +56,10 @@ const StyledEducationAndWorkHistoryCard = styled.div`
 
 const LeftSideCard = styled.div`
     min-width: 368px;
+    
+    @media ${theme.media.desktop} {
+        min-width: 260px;
+    }
 `
 
 const Title = styled.h3`

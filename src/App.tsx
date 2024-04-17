@@ -29,7 +29,7 @@ function App() {
                     <Price/>
                     {/*<Recommendations/>*/}
                     <Education/>
-                    {/*<WorkHistory/>*/}
+                    <WorkHistory/>
                     <Portfolio/>
                     {/*<Blog/>*/}
                     {/*<Footer/>*/}
