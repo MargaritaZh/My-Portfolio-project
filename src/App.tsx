@@ -31,7 +31,7 @@ function App() {
                     <Education/>
                     <WorkHistory/>
                     <Portfolio/>
-                    {/*<Blog/>*/}
+                    <Blog/>
                     {/*<Footer/>*/}
             </MainContent>
             <NavBar/>

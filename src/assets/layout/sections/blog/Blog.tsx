@@ -27,7 +27,7 @@ export const Blog = () => {
                         Velit
                         officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
                 </SectionTitle>
-                <FlexWrapper justify={"space-between"} align={"flex-start"}>
+                <BlogCardsWrapper>
                     <BlogCart
                         src={blogCartImage1}
                         title={"How to make web tempates"}
@@ -40,7 +40,7 @@ export const Blog = () => {
                         src={blogCartImage3}
                         title={"How to make Flyer Design"}
                         text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
-                </FlexWrapper>
+                </BlogCardsWrapper>
                 <InfoWrapper>
                     <Info/>
                     <ContactInfo/>
@@ -64,17 +64,25 @@ export const Blog = () => {
     );
 };
 
-const InfoWrapper=styled.div`
+const BlogCardsWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    overflow-x: auto;
+`
+
+const InfoWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 70px 0 70px;
-    
+
 `
 
 const StyledMap = styled.iframe``
 
-const ImageWrapper=styled.div`
+const ImageWrapper = styled.div`
     margin: 70px 0 70px;
     display: flex;
     justify-content: space-between;
