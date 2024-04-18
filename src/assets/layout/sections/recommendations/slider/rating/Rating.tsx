@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {RatingStar} from "./ratingStar/RatingStar";
 
+
 export const Rating = () => {
     return (
         <StyledRating>

@@ -28,7 +28,6 @@ const StyledFooter = styled.footer`
 `
 
 const Copyright = styled.small`
-
     font-size: 15px;
     font-weight: 400;
     line-height: 1.6;

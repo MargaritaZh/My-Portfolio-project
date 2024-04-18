@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionText} from "../../../../components/SectionText";
 import {SectionDescription} from "../../../../components/SectionDescription";
-import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {BlogCart} from "./blogCart/BlogCart";
 import blogCartImage1 from "../../../images/blog-images/blog-image-1.webp"
 import blogCartImage2 from "../../../images/blog-images/blog-image-2.webp"
@@ -93,7 +92,11 @@ const ImageWrapper = styled.div`
     justify-content: space-between;
     
     flex-wrap: wrap;
+    row-gap: 20px;
     
+    @media ${theme.media.tablet} {
+        padding: 0 18px;
+    }
 `
 
 const Image = styled.img`
