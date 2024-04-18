@@ -58,12 +58,19 @@ const StyledInfo = styled.div`
     width: 100%;
     background-color: ${theme.colors.primaryBg};
     outline: solid 1px blueviolet;
+    
+  
 `
 
 const Title = styled.h2`
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 50px;
+
+    @media ${theme.media.tablet} {
+        margin: 70px 0 30px;
+        text-align: center;
+    }
 `
 
 const StyledForm = styled.form`

@@ -52,7 +52,7 @@ const Title = styled.h2`
     text-transform: capitalize;
     margin-bottom: 50px;
     
-    @media ${theme.media.tablet} {
+    @media ${theme.media.navMenu} {
         text-align: center;
     }
 `

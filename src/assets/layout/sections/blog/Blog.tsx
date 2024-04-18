@@ -76,12 +76,11 @@ const BlogCardsWrapper = styled.div`
 const InfoWrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     margin: 70px 0 70px;
     
     
     flex-wrap: wrap-reverse;
-    @media ${theme.media.tablet} {
+    @media ${theme.media.navMenu} {
         margin: 65px 0 70px;
     }
 `
@@ -92,6 +91,9 @@ const ImageWrapper = styled.div`
     margin: 70px 0 70px;
     display: flex;
     justify-content: space-between;
+    
+    flex-wrap: wrap;
+    
 `
 
 const Image = styled.img`
