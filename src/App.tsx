@@ -32,7 +32,7 @@ function App() {
                     <WorkHistory/>
                     <Portfolio/>
                     <Blog/>
-                    {/*<Footer/>*/}
+                    <Footer/>
             </MainContent>
             <NavBar/>
         </div>

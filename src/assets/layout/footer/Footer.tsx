@@ -21,6 +21,10 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     background-color: ${theme.colors.secondaryBg};
     padding: 18px 0;
+    
+    @media ${theme.media.navMenu} {
+        padding: 18px 0 100px;
+    }
 `
 
 const Copyright = styled.small`
