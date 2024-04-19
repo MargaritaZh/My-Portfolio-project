@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Link} from "../../../../../components/link/Link";
 import {theme} from "../../../../../styles/Theme";
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
+
 type ServicePropsType = {
     iconId?: string;
     height?: string;
@@ -14,7 +15,7 @@ type ServicePropsType = {
     isLink: boolean;
 };
 
-export const Service = ({ iconId, height, width, viewBox, title, text, isLink = false }: ServicePropsType) => {
+export const Service:React.FC<ServicePropsType> = ({ iconId, height, width, viewBox, title, text, isLink = false }: ServicePropsType) => {
     return (
         <StyledService>
             <FlexWrapper direction={"column"} justify={"space-between"} align={"center"}>

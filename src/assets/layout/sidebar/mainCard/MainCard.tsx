@@ -33,7 +33,7 @@ const  StyledMainCard=styled.div`
     ${StyledSidebarMenu} {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 15px;
         width: 100%;
