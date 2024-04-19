@@ -33,28 +33,31 @@ export const ContactInfoCard = (props: ContactInfoCardPropsType) => {
 
 const StyledContactInfoCard = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    min-height: 210px;
+    height: 210px;
+    max-width: 370px;
     width: 100%;
     padding: 25px 25px 16px;
 
     display: flex;
     flex-direction: column;
 
-    & + div {
-        margin-top: 18px;
+   & + div {
+         margin-top: 18px;
     }
     
-    @media ${theme.media.tablet} {
-        max-width: 344px;
-    }
+     @media ${theme.media.desktop} {
+         & + div {
+             margin-top: 0;
+         }
+     }
 `
 
 const IconWrapper = styled.div`
     margin: 0 auto;
     
     background-color: ${theme.colors.accent};
-    height: 40px;
-    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
