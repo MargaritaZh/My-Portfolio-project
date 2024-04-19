@@ -27,7 +27,6 @@ const [isOpenMenu , setIsOpenMenu] = useState(false)
                 <button onClick={() => setIsOpenMenu( true)}>
                     открыть
                 </button>
-                    {/*<Header/>*/}
                     <Main />
                     <Services/>
                     <Price/>
@@ -44,7 +43,6 @@ const [isOpenMenu , setIsOpenMenu] = useState(false)
 }
 
 export default App;
-
 
 
 const MainContent = styled.main`

@@ -72,7 +72,6 @@ const StyledSidebar = styled.aside<{ isOpenMenu: boolean }>`
 
      @media ${theme.media.navMenu} {
          padding: 50px 35px 100px 35px;
-
      }
 
      @media ${theme.media.sideBar} {

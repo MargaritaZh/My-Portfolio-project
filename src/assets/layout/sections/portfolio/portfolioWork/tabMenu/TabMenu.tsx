@@ -34,8 +34,8 @@ const ListItem=styled.ul`
     @media ${theme.media.navMenu} {
         justify-content: flex-start;
         max-width: 630px;
-        overflow: hidden;
         white-space: nowrap;
+        overflow-x: auto;
     }
 `
 
