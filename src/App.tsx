@@ -12,19 +12,23 @@ import {Sidebar} from "./assets/layout/sidebar/Sidebar";
 import {NavBar} from "./assets/layout/navBar/NavBar";
 import styled from "styled-components";
 import {theme} from "./styles/Theme";
+import {useState} from "react";
 
 
 
 
 function App() {
-
+const [isOpenMenu , setIsOpenMenu] = useState(false)
 
         return (
         <div className="App">
-            <Sidebar/>
+            <Sidebar isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
             <MainContent>
+                <button onClick={() => setIsOpenMenu( true)}>
+                    открыть
+                </button>
                     {/*<Header/>*/}
-                    <Main/>
+                    <Main />
                     <Services/>
                     <Price/>
                     <Recommendations/>
@@ -45,7 +49,9 @@ export default App;
 
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
+    
     outline: solid 3px #ffae00;
+    
     
     @media ${theme.media.navMenu} {
         padding: 0 15px 0 330px; 

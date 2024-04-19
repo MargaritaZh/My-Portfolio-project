@@ -33,7 +33,6 @@ type StyledBtnPropsType = {
     fontSize?: string
     btnType?: "mainBtn" | "priceBtn" | "infoBtn" |"downloadBtn"
     active?:boolean
-
 }
 
 export const StyledButton = styled.button<StyledBtnPropsType>`
@@ -56,14 +55,11 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
         font-size: 16px;
         font-weight: 500;
         text-transform: uppercase;
+        transition: 0.2s;
 
         &:hover {
-            height: 64px;
-            width: 202px;
+            //background-image: url("../");
             color: ${theme.colors.secondaryBg};
-            font-size: 24px;
-            font-weight: 700;
-            
         }
     `} 
             

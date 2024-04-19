@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
+import {WrapperEducationAndWorkHistoryCards} from "./WrapperEducationAndWorkHistoryCards";
+import {SectionTitle} from "./SectionTitle";
 
 export const StyledSection = styled.section`
-    //max-width: 970px;
-    //width: 100%;
-    //min-height: 100%;
-    
     outline: solid 1px green;
     background-color: ${theme.colors.primaryBg};
     margin-bottom: 70px;
@@ -21,11 +19,18 @@ export const StyledSection = styled.section`
 
     &:nth-child(5),
     &:nth-child(6){
+
         background-color: ${theme.colors.secondaryBg};
     }
-
     
-        @media screen and (min-width: 1440px) {
+    ${SectionTitle}{
+        background-color: ${theme.colors.primaryBg};
+        width: 100%;
+    }
+
+
+
+    @media screen and (min-width: 1440px) {
         max-width: 100%;
         width: 100%;
     }

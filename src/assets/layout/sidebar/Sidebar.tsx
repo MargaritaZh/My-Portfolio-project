@@ -34,50 +34,52 @@ const extraSkillsItems = ["Bootstrap, Materialize", "Stylus, Sass, Less", "Gulp,
 
 
 
-
-
-export const Sidebar = () => {
+export const Sidebar = ({isOpenMenu, setIsOpenMenu}:any) => {
     return (
-        <StyledSidebar>
+        <StyledSidebar isOpenMenu={isOpenMenu}>
+            <button onClick={() => setIsOpenMenu(false)}>
+                закрыть
+            </button>
             <MainCard/>
             <DescriptionCard items={descriptionItems}/>
             <SkillsAdnLanguagesCard title={"Languages"} items={languagesItems}/>
             <SkillsAdnLanguagesCard title={"Skills"} items={skillsItems}/>
             <ExtraSkillsCard title={"Extra Skills"} items={extraSkillsItems}/>
-            <Button text={"Download cv"} btnType={"downloadBtn"} iconId={"btnDownload"} width={"14"} height={"16"} viewBox={"0 0 14 16"}/>
+            <Button text={"Download cv"} btnType={"downloadBtn"} iconId={"btnDownload"} width={"14"} height={"16"}
+                    viewBox={"0 0 14 16"}/>
         </StyledSidebar>
     );
 };
 
- const StyledSidebar = styled.aside`
+const StyledSidebar = styled.aside<{ isOpenMenu: boolean }>`
     background-color: ${theme.colors.secondaryBg};
-    display: flex;
-    flex-direction: column;
-    width: 305px;
-     
-    padding: 50px 35px 25px 35px;
+     display: flex;
+     flex-direction: column;
+     width: 305px;
 
-    outline: 1px solid #a443a4;
+     padding: 50px 35px 25px 35px;
 
-    height: 100vh;
-    overflow: auto;
+     outline: 1px solid #a443a4;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 999;
-     
+     height: 100vh;
+     overflow: auto;
+
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     z-index: 999;
+
      @media ${theme.media.navMenu} {
          padding: 50px 35px 100px 35px;
 
      }
 
      @media ${theme.media.sideBar} {
-         display: none;
+         display: ${props => props.isOpenMenu ? 'flex' : 'none'};
      }
-}
-`
+ }
+ `
 
 
 

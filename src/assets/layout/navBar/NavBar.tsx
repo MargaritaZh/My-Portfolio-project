@@ -42,7 +42,6 @@ const StyledNavBar = styled.aside`
         }
 
         ${StyledSidebarMenu} {
-            
             flex-direction: row;
             gap: 10px;
             margin-top: 0;
@@ -51,9 +50,9 @@ const StyledNavBar = styled.aside`
         }
 
         top: auto; /* Отменяем фиксацию сверху */
-        bottom: 0; /* Зафиксируем панель внизу экрана */
+        //bottom: 0; /* Зафиксируем панель внизу экрана */
         left: 0; /* Зафиксируем панель по левому краю */
-        right: 0; /* Зафиксируем панель по правому краю */
+        //right: 0; /* Зафиксируем панель по правому краю */
         width: 100%; /* Растягиваем панель на всю ширину экрана */
         height: 80px; /* Задаем высоту панели */
         padding: 0; /* Убираем отступы */

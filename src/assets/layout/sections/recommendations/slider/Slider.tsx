@@ -59,6 +59,11 @@ const items = [
            src={reviewImage3}
            userName={"Talan Westervelt"}
            profession={"Business man"}/>,
+    <Slide title={"Great Quality!"}
+           description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."}
+           src={reviewImage3}
+           userName={"Talan Westervelt"}
+           profession={"Business man"}/>,
 ];
 
 export const Slider = () => (
@@ -90,6 +95,10 @@ const StyledSlid = styled.div`
         margin-left: 20px;
     }
     padding: 25px;
+    
+    @media ${theme.media.desktop} {
+        width: 100%;
+    }
 `
 
 const Title = styled.h3`
