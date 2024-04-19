@@ -59,7 +59,9 @@ const StyledInfo = styled.div`
     background-color: ${theme.colors.primaryBg};
     outline: solid 1px blueviolet;
     
-  
+    @media ${theme.media.desktop} {
+        max-width: 970px;
+    }
 `
 
 const Title = styled.h2`

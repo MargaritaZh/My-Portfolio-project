@@ -15,8 +15,6 @@ import {theme} from "./styles/Theme";
 import {useState} from "react";
 
 
-
-
 function App() {
 const [isOpenMenu , setIsOpenMenu] = useState(false)
 
