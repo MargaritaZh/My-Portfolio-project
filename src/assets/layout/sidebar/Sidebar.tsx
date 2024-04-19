@@ -37,9 +37,9 @@ const extraSkillsItems = ["Bootstrap, Materialize", "Stylus, Sass, Less", "Gulp,
 export const Sidebar = ({isOpenMenu, setIsOpenMenu}:any) => {
     return (
         <StyledSidebar isOpenMenu={isOpenMenu}>
-            <button onClick={() => setIsOpenMenu(false)}>
+            <BurgerButton onClick={() => setIsOpenMenu(false)}>
                 закрыть
-            </button>
+            </BurgerButton>
             <MainCard/>
             <DescriptionCard items={descriptionItems}/>
             <SkillsAdnLanguagesCard title={"Languages"} items={languagesItems}/>
@@ -76,10 +76,27 @@ const StyledSidebar = styled.aside<{ isOpenMenu: boolean }>`
 
      @media ${theme.media.sideBar} {
          display: ${props => props.isOpenMenu ? 'flex' : 'none'};
+         
+         position: absolute;
+         width: 375px;
+         height: 100%;
      }
  }
  `
 
 
+const BurgerButton=styled.button`
+    position: absolute;
+    padding: 10px;
+    background-color: greenyellow;
+    z-index: 9999;
+    right: 30px;
+    top: 35px;
 
+    display: none;
+    @media ${theme.media.sideBar} {
+        display: block;
+    }
+
+`
 

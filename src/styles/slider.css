@@ -21,7 +21,6 @@
 
 .alice-carousel__dots-item:not(.__custom).__active {
     background-color: #d0947e;
-    width: 20px;
 }
 
 .alice-carousel__prev-btn,

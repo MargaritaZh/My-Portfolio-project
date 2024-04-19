@@ -22,9 +22,9 @@ const [isOpenMenu , setIsOpenMenu] = useState(false)
         <div className="App">
             <Sidebar isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
             <MainContent>
-                <button onClick={() => setIsOpenMenu( true)}>
+                <BurgerButton onClick={() => setIsOpenMenu( true)}>
                     открыть
-                </button>
+                </BurgerButton>
                     <Main />
                     <Services/>
                     <Price/>
@@ -45,8 +45,9 @@ export default App;
 
 const MainContent = styled.main`
     padding: 0 133px 0 330px;
-    
     outline: solid 3px #ffae00;
+    position: relative;
+    z-index: 0;
     
     
     @media ${theme.media.navMenu} {
@@ -56,7 +57,20 @@ const MainContent = styled.main`
     @media ${theme.media.sideBar} {
         padding: 0 15px 0 15px;
     }
-       
 `
 
+const BurgerButton=styled.button`
+    padding: 10px;
+    background-color: greenyellow;
+    position: absolute;
+    top:35px;
+    left: 30px;
+    
+    z-index: 1;
+    
+    display: none;
+    @media ${theme.media.sideBar} {
+        display: block;
+    }
+`
 
