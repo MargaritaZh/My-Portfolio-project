@@ -2,51 +2,64 @@ import styled from "styled-components";
 import {Button} from "../../../../../components/button/Button";
 import {Input} from "./input/Input";
 import {theme} from "../../../../../styles/Theme";
+import React from "react";
 
-export const Info = () => {
+const formData = [
+    {
+        id: "userName",
+        type: "text",
+        name: "user-name",
+        placeholder: "name",
+        label: "Your Full Name (Required)",
+        "as": "input",
+    },
+    {
+        id: "userEmail",
+        type: "email",
+        name: "user-email",
+        placeholder: "email",
+        label: "Your Email (Required)",
+        "as": "input",
+    },
+    {
+        id: "userSubject",
+        type: "text",
+        name: "user-subject",
+        placeholder: "subject",
+        label: "Subject",
+        "as": "input",
+    },
+    {
+        id: "userMessage",
+        name: "user-message",
+        placeholder: "message",
+        label: "Your Message",
+        "as": "textarea",
+    },
+
+]
+
+
+export const Info: React.FC = () => {
     return (
         <StyledInfo>
             <Title>Leave us your info</Title>
             <StyledForm>
+
+                {formData.map((e) => (
                     <Input
-                        id='userName'
-                        type="text"
-                        name="user-name"
-                        placeholder="name"
+                        key={e.id}
+                        id={e.id}
+                        type={e.type}
+                        name={e.name}
+                        placeholder={e.placeholder}
                         label={
-                            <StyledLabel htmlFor="userName">Your Full Name ( Required)</StyledLabel>
+                            <StyledLabel htmlFor={e.id}>{e.label}</StyledLabel>
                         }
-                        as='input'
+                        as={e.as as "textarea" | "input"}
                     />
-                    <Input
-                        id='userEmail'
-                        type="email"
-                        name="user-email"
-                        placeholder="email"
-                        label={
-                            <StyledLabel htmlFor="userEmail">Your Email ( Required)</StyledLabel>
-                        }
-                        as='input'
-                    />
-                    <Input
-                        id='userSubject'
-                        type="text"
-                        name="user-subject"
-                        placeholder="subject"
-                        label={
-                            <StyledLabel htmlFor="userSubject">Subject</StyledLabel>
-                        }
-                        as='input'
-                    />
-                    <Input
-                        id='userMessage'
-                        name="user-message"
-                        placeholder="message"
-                        label={
-                            <StyledLabel htmlFor="userMessage">Your Message</StyledLabel>
-                        }
-                        as='textarea'
-                    />
+                ))}
+
                 <Button text={"send message"} btnType={"infoBtn"}/>
             </StyledForm>
         </StyledInfo>
@@ -58,7 +71,7 @@ const StyledInfo = styled.div`
     width: 100%;
     background-color: ${theme.colors.primaryBg};
     outline: solid 1px blueviolet;
-    
+
     @media ${theme.media.desktop} {
         max-width: 970px;
     }
