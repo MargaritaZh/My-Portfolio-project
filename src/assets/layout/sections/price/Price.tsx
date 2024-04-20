@@ -8,8 +8,28 @@ import {Container} from "../../../../components/Container";
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
 
+const priceCardData = [
+    {
+        showMostPopular: false,
+        title: "Silver",
+        price: "$0.00",
+        iconTypeBoundary: 2,
+    },
+    {
+        showMostPopular: true,
+        title: "Gold",
+        price: "$50.00",
+        iconTypeBoundary: 4,
+    },
+    {
+        showMostPopular: false,
+        title: "Dimond",
+        price: "$80.00",
+        iconTypeBoundary: 10,
+    },
 
-export const Price = () => {
+]
+export const Price: React.FC = () => {
     return (
         <StyledSection>
             <Container>
@@ -19,21 +39,26 @@ export const Price = () => {
                         Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
                 </SectionTitle>
                 <Wrapper>
-                    <PriceCard title={"Silver"} price={"$0.00"} iconTypeBoundary={2}/>
-                    <PriceCard showMostPopular title={"Gold"} price={"$50.00"} iconTypeBoundary={4}/>
-                    <PriceCard title={"Dimond"} price={"$80.00"} iconTypeBoundary={10}/>
+
+                    {priceCardData.map((e, index) => {
+                        return (
+                            <PriceCard key={index}
+                                       showMostPopular={e.showMostPopular} title={e.title} price={e.price}
+                                       iconTypeBoundary={e.iconTypeBoundary}/>
+                        )
+                    })}
+
                 </Wrapper>
             </Container>
         </StyledSection>
     );
 };
 
-const Wrapper=styled.div`
+const Wrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 
     @media ${theme.media.desktop} {
-        gap: 20px;
         overflow-x: auto;
     }
 `

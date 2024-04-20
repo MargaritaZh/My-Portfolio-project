@@ -5,14 +5,13 @@ import {Button} from "../../../../../components/button/Button";
 import {theme} from "../../../../../styles/Theme";
 
 type PriceCardPropsType = {
-
     showMostPopular?: boolean
-    title:string
+    title: string
     price: string
     iconTypeBoundary: number
 };
 
-export const PriceCard = (props: PriceCardPropsType) => {
+export const PriceCard: React.FC<PriceCardPropsType> = (props: PriceCardPropsType) => {
     const featuresData = [
         {
             iconId: "check",
@@ -58,6 +57,7 @@ export const PriceCard = (props: PriceCardPropsType) => {
             </Wrapper>
             <TextDescription>For most businesses that want to optimize web queries</TextDescription>
             <ListItem>
+
                 {featuresData.map((feature, index) => (
                     <Item key={index}>
                         <Icon width={"24"} height={"25"} viewBox={"0 0 25 24"}
@@ -80,53 +80,53 @@ const StyledPriceCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     position: relative;
     z-index: 0;
 `
 
-const PopularText=styled.span`
+const PopularText = styled.span`
     background-color: ${theme.colors.accent};
     text-align: center;
     padding: 3px 0;
-    
+
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: -1;
 `
-const CardTitle=styled.h3`
+const CardTitle = styled.h3`
     color: ${theme.colors.font};
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 19px;
 `
-const CostOfWork=styled.h2``
+const CostOfWork = styled.h2``
 
-const Time=styled.span``
+const Time = styled.span``
 
-const Wrapper=styled.div`
-display: flex;
+const Wrapper = styled.div`
+    display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap:10px;
+    gap: 10px;
     margin-bottom: 8px;
 `
-const TextDescription=styled.p`
+const TextDescription = styled.p`
     text-align: center;
     margin-bottom: 21px;
 `
-const ListItem=styled.ul`
+const ListItem = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-bottom: 21px;
 `
-const Item=styled.li`
+const Item = styled.li`
     display: flex;
     align-items: center;
     gap: 15px;
 `
-const ItemText=styled.span``
+const ItemText = styled.span``
 
