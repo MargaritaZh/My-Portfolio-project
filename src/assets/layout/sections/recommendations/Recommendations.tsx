@@ -7,7 +7,7 @@ import {SectionTitle} from "../../../../components/SectionTitle";
 import {Container} from "../../../../components/Container";
 
 
-export const Recommendations = () => {
+export const Recommendations: React.FC = () => {
     return (
         <StyledSection>
             <Container>

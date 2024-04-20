@@ -27,7 +27,7 @@ type SlidPropsType = {
     userName: string
     profession: string
 }
-const Slide = (props: SlidPropsType) => {
+const Slide: React.FC<SlidPropsType> = (props: SlidPropsType) => {
 
     return (
         <StyledSlid>
@@ -45,26 +45,48 @@ const Slide = (props: SlidPropsType) => {
     )
 }
 
-const items = [
-    <Slide title={"Great Quality!"}
-           description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."}
-           src={reviewImage1} userName={"James Gouse"} profession={"Graphic Designer"}/>,
-    <Slide title={"Amazing work!"}
-           description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."}
-           src={reviewImage2}
-           userName={"Tiana Philips"}
-           profession={"Photographer"}/>,
-    <Slide title={"Great Quality!"}
-           description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."}
-           src={reviewImage3}
-           userName={"Talan Westervelt"}
-           profession={"Business man"}/>,
-    <Slide title={"Great Quality!"}
-           description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."}
-           src={reviewImage3}
-           userName={"Talan Westervelt"}
-           profession={"Business man"}/>,
+
+const slidesData = [
+    {
+        title: "Great Quality!",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....",
+        src: reviewImage1,
+        userName: "James Gouse",
+        profession: "Graphic Designer"
+    },
+    {
+        title: "Amazing work!",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....",
+        src: reviewImage2,
+        userName: "Tiana Philips",
+        profession: "Photographer"
+    },
+    {
+        title: "Great Quality!",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....",
+        src: reviewImage3,
+        userName: "Talan Westervelt",
+        profession: "Business man"
+    },
+    {
+        title: "Great Quality!",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....",
+        src: reviewImage3,
+        userName: "Talan Westervelt",
+        profession: "Business man"
+    }
 ];
+
+const items = slidesData.map((slide, index) => (
+    <Slide
+        key={index}
+        title={slide.title}
+        description={slide.description}
+        src={slide.src}
+        userName={slide.userName}
+        profession={slide.profession}
+    />
+));
 
 export const Slider = () => (
         <StyledSlider>
@@ -81,7 +103,7 @@ const StyledSlider = styled.div`
     outline: solid 2px red;
     max-width: 970px;
     width: 100%;
-    
+
     @media ${theme.media.tablet} {
         padding: 0 18px;
     }
@@ -94,8 +116,9 @@ const StyledSlid = styled.div`
     & + div {
         margin-left: 20px;
     }
+
     padding: 25px;
-    
+
     @media ${theme.media.desktop} {
         width: 100%;
     }

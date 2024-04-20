@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {RatingStar} from "./ratingStar/RatingStar";
 
 
-export const Rating = () => {
+export const Rating: React.FC = () => {
     return (
         <StyledRating>
             <RatingStar/>
@@ -16,9 +16,8 @@ export const Rating = () => {
     );
 };
 
-const StyledRating =styled.ul`
+const StyledRating = styled.ul`
     display: flex;
-    
     margin-bottom: 15px;
 `
 
