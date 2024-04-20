@@ -3,17 +3,16 @@ import styled from "styled-components"
 import {Button, StyledButton} from "../../../../../components/button/Button";
 import {theme} from "../../../../../styles/Theme";
 
-export const PortfolioWork = (props: { src: string }) => {
+export const PortfolioWork: React.FC<{ src: string }> = (props: { src: string }) => {
     return (
         <StyledPortfolioWork>
-                <Image src={props.src} alt="Portfolio Works"/>
-                <Button text={""} iconId={"portfolioBtn"} width={"52"} height={"52"} viewBox={"0 0 52 52"}/>
+            <Image src={props.src} alt="Portfolio Works"/>
+            <Button text={""} iconId={"portfolioBtn"} width={"52"} height={"52"} viewBox={"0 0 52 52"}/>
         </StyledPortfolioWork>
     );
 };
 
 const StyledPortfolioWork = styled.div`
-    outline: solid 1px red;
 
     position: relative;
 
@@ -46,7 +45,7 @@ const StyledPortfolioWork = styled.div`
             opacity: 1;
         }
     }
-    
+
     @media ${theme.media.tablet} {
         &::before {
             opacity: 1;

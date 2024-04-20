@@ -7,7 +7,7 @@ import {theme} from "../../../../../../styles/Theme";
 //     menuItems: Array<string>
 // }
 
-export const TabMenu = (props: { menuItems: Array<string> }) => {
+export const TabMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
         <StyledTabMenu>
             <ListItem>
@@ -25,7 +25,7 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
 
 const StyledTabMenu = styled.nav``
 
-const ListItem=styled.ul`
+const ListItem = styled.ul`
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -45,7 +45,7 @@ const Link = styled.a`
     font-size: 18px;
     font-weight: 500;
     color: ${theme.colors.font};
-    
+
     &:hover {
         color: ${theme.colors.accent};
     }

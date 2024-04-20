@@ -20,7 +20,20 @@ import {theme} from "../../../../styles/Theme";
 
 
 const worksItems = ["All categories", "UI Design", "Web Templates", "Logo", "Branding"]
-export const Portfolio = () => {
+
+const portfolioWorksData = [
+    {src: work1},
+    {src: work2},
+    {src: work3},
+    {src: work4},
+    {src: work5},
+    {src: work6},
+    {src: work7},
+    {src: work8},
+    {src: work9},
+]
+
+export const Portfolio: React.FC = () => {
     return (
         <StyledSection>
             <Container>
@@ -32,15 +45,14 @@ export const Portfolio = () => {
                 </SectionTitle>
                 <TabMenu menuItems={worksItems}/>
                 <WrapperPortfolioWorks>
-                    <PortfolioWork src={work1}/>
-                    <PortfolioWork src={work2}/>
-                    <PortfolioWork src={work3}/>
-                    <PortfolioWork src={work4}/>
-                    <PortfolioWork src={work5}/>
-                    <PortfolioWork src={work6}/>
-                    <PortfolioWork src={work7}/>
-                    <PortfolioWork src={work8}/>
-                    <PortfolioWork src={work9}/>
+
+                    {portfolioWorksData.map((e, index) => {
+                        return (
+                            <PortfolioWork key={index} src={e.src}/>
+
+                        )
+                    })}
+
                 </WrapperPortfolioWorks>
             </Container>
         </StyledSection>
@@ -54,7 +66,7 @@ const WrapperPortfolioWorks = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     grid-auto-rows: 300px;
     gap: 20px;
-    
+
     @media ${theme.media.tablet} {
         padding: 0 18px;
     }
