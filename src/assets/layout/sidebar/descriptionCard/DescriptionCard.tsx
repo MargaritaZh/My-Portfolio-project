@@ -10,6 +10,7 @@ type DescriptionCardPropsType = {
 export const DescriptionCard: React.FC<DescriptionCardPropsType> = ({items}) => {
     return (
         <StyledDescriptionCard>
+
             {items.map((item, index) => {
                 const isThirdElement = (index + 1) % 3 === 0;
                 return (
@@ -19,6 +20,7 @@ export const DescriptionCard: React.FC<DescriptionCardPropsType> = ({items}) => 
                     </Wrapper>
                 );
             })}
+
         </StyledDescriptionCard>
     );
 };

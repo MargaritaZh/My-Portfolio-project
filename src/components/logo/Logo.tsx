@@ -8,7 +8,7 @@ type LogoPropsType = {
     viewBox?: string
 }
 
-export const Logo = (props: LogoPropsType) => {
+export const Logo: React.FC<LogoPropsType> = (props: LogoPropsType) => {
     return (
         <a href="">
             <Icon iconId={props.iconId} height={props.height} width={props.width} viewBox={props.viewBox}/>

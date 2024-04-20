@@ -8,6 +8,12 @@ import {DescriptionCard} from "./descriptionCard/DescriptionCard";
 import {theme} from "../../../styles/Theme";
 
 
+interface SidebarProps {
+    isOpenMenu: boolean;
+    setIsOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+
 const descriptionItems = [
     {name: "Age:", description: "24"},
     {name: "Residence:", description: "BD"},
@@ -33,8 +39,7 @@ const skillsItems = [
 const extraSkillsItems = ["Bootstrap, Materialize", "Stylus, Sass, Less", "Gulp, Webpack, Grunt", "GIT Knowledge"]
 
 
-
-export const Sidebar = ({isOpenMenu, setIsOpenMenu}:any) => {
+export const Sidebar: React.FC<SidebarProps> = ({isOpenMenu, setIsOpenMenu}) => {
     return (
         <StyledSidebar isOpenMenu={isOpenMenu}>
             <BurgerButton onClick={() => setIsOpenMenu(false)}>
@@ -53,39 +58,39 @@ export const Sidebar = ({isOpenMenu, setIsOpenMenu}:any) => {
 
 const StyledSidebar = styled.aside<{ isOpenMenu: boolean }>`
     background-color: ${theme.colors.secondaryBg};
-     display: flex;
-     flex-direction: column;
-     width: 305px;
+    display: flex;
+    flex-direction: column;
+    width: 305px;
 
-     padding: 50px 35px 25px 35px;
+    padding: 50px 35px 25px 35px;
 
-     outline: 1px solid #a443a4;
+    outline: 1px solid #a443a4;
 
-     height: 100vh;
-     overflow: auto;
+    height: 100vh;
+    overflow: auto;
 
-     position: fixed;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
 
-     @media ${theme.media.navMenu} {
-         padding: 50px 35px 100px 35px;
-     }
+    @media ${theme.media.navMenu} {
+        padding: 50px 35px 100px 35px;
+    }
 
-     @media ${theme.media.sideBar} {
-         display: ${props => props.isOpenMenu ? 'flex' : 'none'};
-         
-         position: absolute;
-         width: 375px;
-         height: 100%;
-     }
- }
- `
+    @media ${theme.media.sideBar} {
+        display: ${props => props.isOpenMenu ? 'flex' : 'none'};
+
+        position: absolute;
+        width: 375px;
+        height: 100%;
+    }
+}
+`
 
 
-const BurgerButton=styled.button`
+const BurgerButton = styled.button`
     position: absolute;
     padding: 10px;
     background-color: greenyellow;

@@ -11,7 +11,7 @@ type LineProps = {
     percentage: string;
 };
 
-export const SkillsAdnLanguagesCard = (props: SkillsAdnLanguagesCardPropsType) => {
+export const SkillsAdnLanguagesCard:React.FC<SkillsAdnLanguagesCardPropsType> = (props: SkillsAdnLanguagesCardPropsType) => {
     return (
         <StyledSkillsAdnLanguagesCard>
             <Title>{props.title}</Title>

@@ -49,7 +49,6 @@ const MainContent = styled.main`
     position: relative;
     z-index: 0;
     
-    
     @media ${theme.media.navMenu} {
         padding: 0 15px 0 330px; 
     }

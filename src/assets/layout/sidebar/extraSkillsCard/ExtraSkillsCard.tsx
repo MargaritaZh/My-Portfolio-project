@@ -8,7 +8,7 @@ type ExtraSkillsCardPropsType = {
     items: Array<string>
 }
 
-export const ExtraSkillsCard = (props: ExtraSkillsCardPropsType) => {
+export const ExtraSkillsCard:React.FC<ExtraSkillsCardPropsType> = (props: ExtraSkillsCardPropsType) => {
     return (
         <StyledExtraSkillsCard>
             <Title>{props.title}</Title>

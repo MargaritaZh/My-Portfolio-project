@@ -1,6 +1,6 @@
 import React from 'react';
 import iconSprite from "../../assets/images/icons-sprite.svg"
-import styled from "styled-components";
+
 
 type IconPropsType = {
     iconId: string
@@ -9,7 +9,7 @@ type IconPropsType = {
     viewBox?: string
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon:React.FC <IconPropsType>= (props: IconPropsType) => {
     return (
         <svg width={props.width||"78"} height={props.height||"78"} viewBox={props.viewBox|| "0 0 78 78"} fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconSprite}#${props.iconId}`}/>

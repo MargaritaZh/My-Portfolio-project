@@ -3,10 +3,6 @@ import styled from "styled-components";
 import {theme} from "../../../../../../styles/Theme";
 
 
-// type TabMenuPropsType={
-//     menuItems: Array<string>
-// }
-
 export const TabMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
         <StyledTabMenu>

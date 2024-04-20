@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
     max-width: 970px;
     
@@ -9,5 +8,4 @@ export const Container = styled.div`
     margin: 0 auto;
 
     outline: 1px solid red;
-    
 `

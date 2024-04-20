@@ -15,7 +15,7 @@ type ButtonPropsType = {
     active?: boolean
 }
 
-export const Button = ({text, iconId, height, width, viewBox,btnType,active,}: ButtonPropsType) => {
+export const Button: React.FC <ButtonPropsType>= ({text, iconId, height, width, viewBox,btnType,active,}: ButtonPropsType) => {
     return (
         <StyledButton type="submit"  btnType={btnType} active={active}>
             <TextButton>{text}</TextButton>

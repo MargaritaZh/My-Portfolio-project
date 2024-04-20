@@ -1,13 +1,13 @@
 import React from 'react';
 import smallMainPhoto from "../../../images/small-main-photo.webp";
-import {SidebarMenu, StyledSidebarMenu} from "../../../../components/menu/sidebarMenu/SidebarMenu";
+import {SidebarMenu, StyledSidebarMenu} from "../../../../components/sidebarMenu/SidebarMenu";
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
 
 
 const menuIconsId = ["facebook", "instagram", "twitter", "linkedin", "yourtube", "dribble"]
 
-export const MainCard = () => {
+export const MainCard: React.FC = () => {
     return (
         <StyledMainCard>
             <ImageWrapper>
@@ -20,14 +20,14 @@ export const MainCard = () => {
     );
 };
 
-const  StyledMainCard=styled.div`
+const StyledMainCard = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 24px;
     min-width: 220px;
-    
+
     border-bottom: 2px solid ${theme.colors.primaryBg};
 
     ${StyledSidebarMenu} {
@@ -38,7 +38,7 @@ const  StyledMainCard=styled.div`
         gap: 15px;
         width: 100%;
         margin-top: 15px;
-        
+
         a {
             width: 24px;
             height: 24px;
@@ -47,36 +47,36 @@ const  StyledMainCard=styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            &:hover{
-              background-color: ${theme.colors.accentSideBar};
+
+            &:hover {
+                background-color: ${theme.colors.accentSideBar};
             }
-            
+
         }
     }
 `
 
-const ImageWrapper=styled.div`
+const ImageWrapper = styled.div`
     margin-bottom: 30px;
     height: 150px;
     width: 150px;
-    
+
     position: relative;
     z-index: 0;
-    
-   &::before{
-       content: "";
-       display: inline-block;
-       width: 16px;
-       height: 16px;
-       border-radius: 50%;
-       background-color: ${theme.colors.accentSideBar};
-       
-       position: absolute;
-       bottom: 18px;
-       right: 10px;
-       z-index: 1;
-   }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: ${theme.colors.accentSideBar};
+
+        position: absolute;
+        bottom: 18px;
+        right: 10px;
+        z-index: 1;
+    }
 `
 
 const Image = styled.img`

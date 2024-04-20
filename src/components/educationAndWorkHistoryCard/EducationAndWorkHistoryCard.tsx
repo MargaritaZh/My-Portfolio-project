@@ -12,7 +12,7 @@ type EducationAndWorkHistoryCardPropsType = {
 
 }
 
-export const EducationAndWorkHistoryCard = (props: EducationAndWorkHistoryCardPropsType) => {
+export const EducationAndWorkHistoryCard: React.FC<EducationAndWorkHistoryCardPropsType> = (props: EducationAndWorkHistoryCardPropsType) => {
     return (
         <StyledEducationAndWorkHistoryCard>
             <LeftSideCard>
@@ -33,10 +33,10 @@ export const EducationAndWorkHistoryCard = (props: EducationAndWorkHistoryCardPr
 const StyledEducationAndWorkHistoryCard = styled.div`
     background-color: ${theme.colors.secondaryBg};
     width: 100%;
-    
+
     outline: 1px solid red;
     display: flex;
-   
+
 
     &:first-child {
         border-bottom: 2px solid rgb(240, 240, 246);
@@ -56,7 +56,7 @@ const StyledEducationAndWorkHistoryCard = styled.div`
 
 const LeftSideCard = styled.div`
     min-width: 368px;
-    
+
     @media ${theme.media.desktop} {
         min-width: 260px;
     }
@@ -64,7 +64,7 @@ const LeftSideCard = styled.div`
 
 const Title = styled.h3`
     margin: 4px 0 25px;
-    
+
     @media ${theme.media.navMenu} {
         margin: 0 0 12px;
     }
@@ -88,9 +88,9 @@ const PeriodOfStudy = styled.span`
 
 const RightSideCard = styled.div``
 
-const RightSideTitle=styled.h3`
+const RightSideTitle = styled.h3`
     margin-bottom: 28px;
-    
+
     @media ${theme.media.navMenu} {
         margin: 27px 0 10px 0;
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../../icon/Icon";
-import {theme} from "../../../styles/Theme";
+import {Icon} from "../icon/Icon";
+import {theme} from "../../styles/Theme";
 
 type SidebarMenuPropsType = {
     menuIconsId: Array<string>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Logo} from "../../../components/logo/Logo";
-import {SidebarMenu, StyledSidebarMenu} from "../../../components/menu/sidebarMenu/SidebarMenu";
+import {SidebarMenu, StyledSidebarMenu} from "../../../components/sidebarMenu/SidebarMenu";
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {FlexWrapper} from "../../../components/FlexWrapper";
