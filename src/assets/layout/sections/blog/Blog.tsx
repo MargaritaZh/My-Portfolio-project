@@ -87,7 +87,9 @@ const BlogCardsWrapper = styled.div`
     align-items: flex-start;
     gap: 20px;
 
-    overflow-x: auto;
+    @media ${theme.media.desktop} {
+        overflow-x: auto;
+    }
 `
 
 const InfoWrapper = styled.div`

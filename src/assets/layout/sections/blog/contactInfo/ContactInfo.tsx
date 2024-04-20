@@ -27,18 +27,33 @@ const cardData = [
     }
 ];
 
+const getIconId = (index:number) => {
+    const iconIds = ["location", "mail", "mobile"];
+    return iconIds[index];
+};
+
 export const ContactInfo = () => {
     return (
         <StyledContactInfo>
             <Title>Contact information</Title>
             <Wrapper>
-                <ContactInfoCard items={cardData[0].info} iconId="location" width="18" height="18" viewBox="0 0 18 18"/>
-                <ContactInfoCard items={cardData[1].info} iconId="mail" width="18" height="18" viewBox="0 0 18 18"/>
-                <ContactInfoCard items={cardData[2].info} iconId="mobile" width="18" height="18" viewBox="0 0 18 18"/>
+
+                {cardData.map((card, index) => (
+                    <ContactInfoCard
+                        key={index}
+                        items={card.info}
+                        iconId={getIconId(index)}
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                    />
+                ))}
+
             </Wrapper>
         </StyledContactInfo>
     );
 };
+
 
 const StyledContactInfo = styled.div`
     background-color: ${theme.colors.primaryBg};

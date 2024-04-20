@@ -25,11 +25,17 @@ export const BlogCart = (props: BlogCartPropsType) => {
 const StyledBlogCart = styled.div`
     background-color: ${theme.colors.secondaryBg};
     min-height: 474px;
-    min-width: 310px;
+    max-width: 310px;
+    width: 100%;
+    
     outline: 1px solid green;
     
     & + div {
         margin-left: 10px;
+    }
+    
+    @media ${theme.media.desktop} {
+        min-width: 310px;
     }
 `
 

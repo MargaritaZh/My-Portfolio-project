@@ -1,29 +1,3 @@
-// import React, {DetailedHTMLProps, InputHTMLAttributes, ReactNode} from "react";
-//
-// type DefaultInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement>, HTMLInputElement | HTMLTextAreaElement>
-//
-// interface IProps extends DefaultInputProps {
-//     label: ReactNode
-//     as: 'textarea' | 'input'
-// }
-//
-// export const Input = ({label, as, ref, ...rest}: IProps) => {
-//
-//     return (
-//         <label>
-//             {label}
-//             {as === 'textarea'
-//                 ?
-//                 <textarea {...rest}>
-//
-//             </textarea>
-//                 :
-//                 <input {...rest}></input>
-//             }
-//         </label>
-//     )
-// }
-
 import React, { DetailedHTMLProps, InputHTMLAttributes, ReactNode, forwardRef, Ref } from "react";
 import styled from "styled-components";
 import {theme} from "../../../../../../styles/Theme";
