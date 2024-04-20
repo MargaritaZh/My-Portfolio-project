@@ -73,9 +73,9 @@ export const Services: React.FC = () => {
                 </SectionTitle>
                 <ServicesWrapper>
 
-                    {servicesData.map((s) => {
+                    {servicesData.map((s,index) => {
                         return (
-                            <Service
+                            <Service key={index}
                                 iconId={s.iconId} height={s.height} width={s.width} viewBox={s.viewBox}
                                 title={s.title}
                                 text={s.text}

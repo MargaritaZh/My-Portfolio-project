@@ -35,7 +35,7 @@ const workHistoryData = [
 ]
 
 
-export const WorkHistory = () => {
+export const WorkHistory:React.FC = () => {
     return (
         <StyledSection>
             <Container>
@@ -47,9 +47,9 @@ export const WorkHistory = () => {
                 </SectionTitle>
                 <WrapperEducationAndWorkHistoryCards>
 
-                    {workHistoryData.map((w) => {
+                    {workHistoryData.map((w,index) => {
                         return (
-                            <EducationAndWorkHistoryCard
+                            <EducationAndWorkHistoryCard key={index}
                                 leftTitle={w.leftTitle}
                                 status={w.status}
                                 periodOfStudy={w.periodOfStudy}

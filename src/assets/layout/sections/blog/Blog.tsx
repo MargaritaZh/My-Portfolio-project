@@ -17,7 +17,27 @@ import {SectionTitle} from "../../../../components/SectionTitle";
 import {Container} from "../../../../components/Container";
 import {theme} from "../../../../styles/Theme";
 
-export const Blog = () => {
+
+const blogCardsData = [
+    {
+        src: blogCartImage1,
+        title: "How to make web tempates",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna ",
+    },
+    {
+        src:blogCartImage2,
+        title:"make Business card",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna ",
+    },
+    {
+        src:blogCartImage3,
+        title:"How to make Flyer Design",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna ",
+    },
+
+]
+
+export const Blog: React.FC = () => {
     return (
         <StyledSection>
             <Container>
@@ -28,18 +48,16 @@ export const Blog = () => {
                         officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
                 </SectionTitle>
                 <BlogCardsWrapper>
-                    <BlogCart
-                        src={blogCartImage1}
-                        title={"How to make web tempates"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
-                    <BlogCart
-                        src={blogCartImage2}
-                        title={"make Business card"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
-                    <BlogCart
-                        src={blogCartImage3}
-                        title={"How to make Flyer Design"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "}/>
+
+                    {blogCardsData.map(((card,index)=>{
+                        return(
+                            <BlogCart key={index}
+                                src={card.src}
+                                title={card.title}
+                                text={card.text}/>
+                        )
+                    }))}
+
                 </BlogCardsWrapper>
                 <InfoWrapper>
                     <Info/>
@@ -76,9 +94,8 @@ const InfoWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 70px 0 70px;
-    
-    
     flex-wrap: wrap-reverse;
+
     @media ${theme.media.navMenu} {
         margin: 65px 0 70px;
     }
@@ -90,10 +107,10 @@ const ImageWrapper = styled.div`
     margin: 70px 0 70px;
     display: flex;
     justify-content: space-between;
-    
+
     flex-wrap: wrap;
     row-gap: 20px;
-    
+
     @media ${theme.media.tablet} {
         padding: 0 18px;
     }

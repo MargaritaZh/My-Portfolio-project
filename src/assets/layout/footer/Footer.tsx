@@ -5,7 +5,7 @@ import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
-export const Footer = () => {
+export const Footer:React.FC = () => {
     return (
         <StyledFooter>
             <Container>

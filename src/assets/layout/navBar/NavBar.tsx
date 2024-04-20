@@ -8,7 +8,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const menuIconsId = ["home", "services", "cv", "portfolio", "blog", "contact"]
 
-export const NavBar = () => {
+export const NavBar:React.FC = () => {
     return (
         <StyledNavBar>
             <FlexWrapper direction={"column"} align={"center"}>

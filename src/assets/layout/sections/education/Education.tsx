@@ -46,9 +46,9 @@ export const Education:React.FC = () => {
                 </SectionTitle>
                 <WrapperEducationAndWorkHistoryCards>
 
-                    {educationData.map((e)=>{
+                    {educationData.map((e,index)=>{
                         return(
-                            <EducationAndWorkHistoryCard
+                            <EducationAndWorkHistoryCard key={index}
                                 leftTitle={e.leftTitle}
                                 status={e.status}
                                 periodOfStudy={e.periodOfStudy}

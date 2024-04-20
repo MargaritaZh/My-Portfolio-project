@@ -10,7 +10,7 @@ type SidebarMenuPropsType = {
     viewBox: string
 }
 
-export const SidebarMenu = (props: SidebarMenuPropsType) => {
+export const SidebarMenu:React.FC<SidebarMenuPropsType> = (props: SidebarMenuPropsType) => {
     return (
         <StyledSidebarMenu>
             {props.menuIconsId.map((item, index) => {
@@ -34,10 +34,7 @@ export const StyledSidebarMenu = styled.ul`
     outline: 1px solid rebeccapurple;
 `
 
-const ListItem = styled.li`
-
-
-`
+const ListItem = styled.li``
 
 const Link = styled.a`
     width: 40px;
@@ -51,6 +48,5 @@ const Link = styled.a`
     &:hover {
         background-color: ${theme.colors.accent};
     }
-    
 `
 
