@@ -11,13 +11,14 @@ type ContactInfoCardPropsType = {
     items: Array<{ label: string; value: string }>;
 };
 
-export const ContactInfoCard = (props: ContactInfoCardPropsType) => {
+export const ContactInfoCard:React.FC<ContactInfoCardPropsType> = (props: ContactInfoCardPropsType) => {
     return (
         <StyledContactInfoCard>
             <IconWrapper>
                 <Icon iconId={props.iconId} height={props.height} width={props.width} viewBox={props.viewBox}/>
             </IconWrapper>
             <ContentWrapper>
+
                 {props.items.map((info, index) => (
                     <Wrapper key={index}>
                         <LeftText>{info.label}</LeftText>
@@ -25,7 +26,6 @@ export const ContactInfoCard = (props: ContactInfoCardPropsType) => {
                     </Wrapper>
                 ))}
             </ContentWrapper>
-
 
         </StyledContactInfoCard>
     );

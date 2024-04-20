@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
-import {Link, StyledServiceLink} from "../../../../../components/link/Link";
+import {Link} from "../../../../../components/link/Link";
 import {theme} from "../../../../../styles/Theme";
 
 type BlogCartPropsType = {
     src: string
-    title:string
+    title: string
     text: string
 }
 
-export const BlogCart = (props: BlogCartPropsType) => {
+export const BlogCart: React.FC<BlogCartPropsType> = (props: BlogCartPropsType) => {
     return (
         <StyledBlogCart>
             <BlogCartImage src={props.src} alt=""/>
@@ -27,13 +27,13 @@ const StyledBlogCart = styled.div`
     min-height: 474px;
     max-width: 310px;
     width: 100%;
-    
+
     outline: 1px solid green;
-    
+
     & + div {
         margin-left: 10px;
     }
-    
+
     @media ${theme.media.desktop} {
         min-width: 310px;
     }
@@ -45,13 +45,13 @@ const BlogCartImage = styled.img`
     object-fit: cover;
 `
 
-const Description=styled.div`
+const Description = styled.div`
     padding: 25px 17px 16px 25px;
 `
-const Title=styled.h3`
+const Title = styled.h3`
     margin-bottom: 8px;
 `
 
-const Text=styled.p`
+const Text = styled.p`
     margin-bottom: 9px;
 `

@@ -27,12 +27,12 @@ const cardData = [
     }
 ];
 
-const getIconId = (index:number) => {
+const getIconId = (index: number) => {
     const iconIds = ["location", "mail", "mobile"];
     return iconIds[index];
 };
 
-export const ContactInfo = () => {
+export const ContactInfo: React.FC = () => {
     return (
         <StyledContactInfo>
             <Title>Contact information</Title>
